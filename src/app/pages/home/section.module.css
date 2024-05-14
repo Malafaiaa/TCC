@@ -1,0 +1,234 @@
+.section_presentation {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    min-height: calc(100vh - 100px);
+
+    min-width: 100%;
+}
+
+.box_presentation {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_presentation {
+    max-width: 500px;
+    margin: 10px;
+}
+
+
+.img_landingpage {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn_doar_home {
+    padding: 15px;
+   
+    background-color: #242978;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ffffff00;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+  .btn_doar_home button{
+    text-decoration: none;
+  }
+  .btn_doar_home > span{
+    display: initial;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  .btn_doar_home:hover {
+    background-color: #ffffff00;
+    color: #242978;
+    text-decoration: none;
+    border: 1px solid #242978;
+  }
+  
+@media (max-width:1000px) {
+  
+    .box_presentation {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .text_presentation {
+      text-align: justify;
+    }
+  
+  }
+
+
+
+.section_data{
+   
+    min-width: 100%;
+  }
+  
+  .container_section_data {
+    background-color: rgba(179, 179, 179, 0.735);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+  
+  }
+  
+  .container_section_data h1 {
+    font-weight: 200;
+    max-width: 700px;
+    color: #ffffff;
+    font-size: clamp(1.75, 1em + 3vw, 2.5em);
+    margin: 20px;
+  }
+  
+  .container_section_data p {
+    font-weight: 200;
+    color: #ffffff;
+  }
+  
+  .section_row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  
+  .content_data{
+    max-width: 220px;
+    margin: 50px 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section_box_data {
+    background-color: #ffffff;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 1px 22px #0000002a;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    border: 5px solid #a3a3a3;
+    width: 220px;
+    height: 220px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .section_box_data p{
+    color: #000;
+  }
+  
+  .section_box_data > img{
+    filter: grayscale(100%);
+  }
+
+  @media (max-width: 1100px) {
+    .content_data{
+        margin: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .content_data {
+      max-width: 150px;
+        margin: 10px 10px;
+    }
+    .section_box_data{
+      width: 150px;
+      height: 150px;
+    }
+    .section_box_data > img{
+      height: 60px;
+    }
+    .section_box_data > p{
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 400px) {
+  .section_box_data > img{
+    height: 34px;
+  }
+    .section_box_data{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+
+  #sobre{
+    text-align: center;
+  }
+  
+  .section_sobre {
+    padding: 20px;
+    background-color: #ffffff;
+  width: 100%;
+  }
+  
+  .container_sobre {
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+  
+  .box_sobre {
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px; /* Aumentando o espaçamento interno */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Arredondando as bordas */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Ajustando o box-shadow para torná-lo mais aparente */
+    text-align: center;
+  }
+  
+  .box_sobre h1 {
+    color: #333;
+    font-size: clamp(1.75, 1em + 3vw, 2.5em);
+    text-align: justify;
+    max-width: 500px;
+  }
+  
+  .box_sobre p {
+    color: #666;
+  }
+  
+  .img_sobre{
+    
+    max-width: 57%;
+    height: auto;
+  }
+
+  
+@media (max-width:1000px) {
+ 
+  .box_sobre {
+    flex-direction: column;
+  }
+}

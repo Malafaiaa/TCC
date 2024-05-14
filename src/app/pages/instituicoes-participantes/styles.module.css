@@ -1,0 +1,138 @@
+.Main {
+    margin: 0;
+    padding: 0;
+    background: #00000000;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-gap: 1rem;
+}
+
+.title {
+    background-color: #12143700;
+    color: #000000;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 24px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    background: #00000000;
+    color: #252525;
+    text-align: justify;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 24px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+.container_card {
+    box-shadow: 1px 1px 20px #00000025;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #00000051;
+    width: 250px; /* Aumentando a largura */
+    height: 300px; /* Aumentando a altura */
+    padding: 10px; /* Reduzindo o espaçamento interno */
+    border-radius: 8px;
+}
+
+.img_card {
+    border-radius: 4px;
+    margin-bottom: 5px;
+    max-width: 100%; /* Imagem ajustada ao tamanho do container */
+    max-height: 200px; /* Reduzindo a altura máxima da imagem */
+}
+
+.name_card {
+    background: #ffffffd6;
+    padding: 8px;
+    color: #172054;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn_card {
+    background: #ffffff00;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #00000049;
+    font-weight: bold;
+    text-align: center;
+    color: #313131;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn_card:hover {
+    background: #00000017;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto; /* Mantenha a proporção da imagem */
+}
+
+/* Início CSS Modal */
+.modal {
+    position: fixed; /* Posição fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+}
+
+.modal_content {
+    background-color: #ffffff; /* Cor de fundo do modal */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+.modal_content img {
+    max-width: 100%; /* Defina a largura máxima da imagem para ocupar toda a largura do modal */
+    height: auto; /* Mantenha a proporção da imagem */
+    max-height: 400px; /* Reduza a altura máxima da imagem */
+}
+
+.btn_option {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remova a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 4px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    margin-top: 30px;
+}
+
+.btn_option:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar por cima */
+}
+
+.saiba_mais_link {
+    margin-bottom: 10px; /* Adicione espaço abaixo do link */
+}
+
+/* Fim CSS Modal */

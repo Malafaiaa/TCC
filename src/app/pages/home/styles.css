@@ -1,0 +1,85 @@
+.header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 5px -6px #000000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.menu a {
+    font-size: 1.2rem;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #323a77;
+    transition: 0.5s;
+}
+
+.menu a:hover {
+    color: #1c2045;
+}
+
+
+.btn-login {
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 8px;
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid #606060;
+    background: #242978;
+    color: #ffffff;
+    margin: 10px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+
+.btn-login:hover {
+    background: #15194a;
+}
+.btn-juridico {
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #070d30a3;
+    background: #00000000;
+    color: #000000c9;
+    margin: 10px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+
+.btn-juridico:hover {
+    background: #6161613c;
+}
+
+.btn-register {
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #070d30a3;
+    background: #00000000;
+    color: #000000c9;
+    margin: 10px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.btn-register:hover {
+    background: #6161613c;
+}
+
+.btns-header {
+    display: flex;
+  
+  }
