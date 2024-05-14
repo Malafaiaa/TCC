@@ -1,6 +1,6 @@
 import style from '../section.module.css';
 
-export default function SectionAboutUs(props) {
+export default function SectionAboutUs(props: any) {
     return (
         <section className={style.section_sobre} id="about_us">
             <h1>SOBRE NÓS</h1>

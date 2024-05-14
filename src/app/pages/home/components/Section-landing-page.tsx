@@ -4,10 +4,10 @@ import style from '../section.module.css'
 import Link from 'next/link';
 
 
-export default function SectionLandinPage(props) {
+export default function SectionLandinPage(props: any) {
     return (
         <>
-            <section className={style.section_presentation}>
+            <section className={style.section_presentation} id='home'>
                 <div className={style.box_presentation}>
                     <div className={style.text_presentation}>
                         <h1><strong>DONATION OUTSOURCING SERVICES</strong></h1>

@@ -5,7 +5,7 @@ import BtnHeader from "./Btn-header"
 import "../styles.css"
 import MenuEmpresa from "./Menu.empresa"
 
-function HeaderEmpresa(props) {
+function HeaderEmpresa(props: any) {
     return (
         <>
             <div className="header">

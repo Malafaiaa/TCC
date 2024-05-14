@@ -1,8 +1,8 @@
 import style from '../section.module.css';
 
-export default function SectionCadastroEmpresas(props) {
+export default function SectionCadastroEmpresas(props: any) {
     return (
-        <section className={style.section_data}>
+        <section className={style.section_data} id='section_data'>
             <div className={style.container_section_data}>
                 <h1>REGISTRE SUA <strong>EMPRESA</strong> E RECEBA DOAÇÕES ATRAVÉS DO <strong>DONATION OUTSOURCING SERVICES</strong></h1>
                 <p>Veja como seu cadastro pode impactar positivamente sua empresa e a sociedade:</p>

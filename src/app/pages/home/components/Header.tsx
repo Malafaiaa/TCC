@@ -4,7 +4,7 @@ import Menu from "./Menu"
 import BtnHeader from "./Btn-header"
 import "../styles.css"
 
-function Header(props) {
+function Header(props: any) {
     return (
         <>
             <div className="header">

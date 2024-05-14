@@ -1,6 +1,6 @@
 import style from '../section.module.css';
 
-export default function SectionWhyChooseUs(props) {
+export default function SectionWhyChooseUs(props: any) {
     return (
         <section className={style.section_why_choose} id={style.why_choose}>
             <h1>POR QUE ESCOLHER NOSSA PLATAFORMA?</h1>

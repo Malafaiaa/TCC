@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import "../styles.css";
 
-function MenuEmpresa(props) {
+function MenuEmpresa(props: any) {
     const { data: session } = useSession();
     const isAuthenticated = session?.user;
 

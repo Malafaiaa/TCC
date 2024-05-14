@@ -2,7 +2,7 @@
 import Link from "next/link"
 import "../styles.css"
 
-export default function BtnJuridico(props) {
+export default function BtnJuridico(props: any) {
     return (
         <>
             <div>

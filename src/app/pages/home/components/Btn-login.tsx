@@ -4,7 +4,7 @@ import Link from "next/link"
 import { signOut } from "next-auth/react"; // Importe a função signOut
 import "../styles.css"
 
-export default function BtnLogin(props) {
+export default function BtnLogin(props: any) {
     const { data: session } = useSession();
     const isAuthenticated = session?.user;
 

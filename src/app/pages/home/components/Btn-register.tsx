@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import "../styles.css"
 
-export default function BtnRegister(props) {
+export default function BtnRegister(props: any) {
     const { data: session } = useSession();
     const isAuthenticated = session?.user;
 

@@ -2,7 +2,7 @@
 import Link from "next/link"
 import "../styles.css"
 
-export default function BtnDoar(props) {
+export default function BtnDoar(props: any) {
     return (
         <>
             <div>
