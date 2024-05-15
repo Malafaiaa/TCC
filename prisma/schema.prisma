@@ -29,6 +29,8 @@ model Account {
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
   user              User     @relation(fields: [userId], references: [id])
+  Company           Company? @relation(fields: [companyId], references: [id])
+  companyId         String?
 
   @@unique([provider, providerAccountId])
 }
@@ -42,12 +44,28 @@ model Session {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
   user         User     @relation(fields: [userId], references: [id])
+  Company      Company? @relation(fields: [companyId], references: [id])
+  companyId    String?
 }
 
 model User {
   id             String    @id @default(cuid())
   name           String?
   email          String?   @unique
+  emailVerified  DateTime?
+  image          String?
+  hashedPassword String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  accounts       Account[]
+  sessions       Session[]
+}
+
+model Company {
+  id             String    @id @default(cuid())
+  name           String?
+  email          String?   @unique
+  cnpj           String    @unique
   emailVerified  DateTime?
   image          String?
   hashedPassword String?

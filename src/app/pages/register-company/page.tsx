@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Image from 'next/image';
 import Link from "next/link";
-import { UserRegisterForm } from "@/components/user-register-auth";
+
 import AuthButton from "@/components/auth-button";
+import { CompanyRegisterForm } from "@/components/company-register-auth";
 
 export const metadata: Metadata = {
   title: "Autenticação",
@@ -33,12 +34,13 @@ export default async function Register(props) {
       <div className="lg:p-8 flex justify-center items-center">
         <div className="mx-auto flex flex-col w-full justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="text-2xl font-semibold tracking-tight">Criar Conta</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Criar conta <p>Empresarial</p></h1>
+            
             <p className="text-sm text-muted-foreground">
-              Preencha com seus dados
+              Preencha com os dados da empresa
             </p>
           </div>
-          <UserRegisterForm />
+          <CompanyRegisterForm />
           <p className="px-8 text-center text-sm text-gray-600">
             Ao clicar em continuar, você concorda com nossos{" "}
             <Link

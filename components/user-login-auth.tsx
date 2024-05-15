@@ -1,20 +1,16 @@
-"use client";
+"use client"
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
-
 import { signIn } from "next-auth/react";
-
 import { useToast } from "@/components/ui/use-toast";
-
 import { ToastAction } from "@/components/ui/toast";
-
 import { useRouter } from "next/navigation";
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 interface IUser {
   email: string;
@@ -28,9 +24,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
   });
 
   const { toast } = useToast();
-
   const router = useRouter();
-
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   async function onSubmit(event: React.SyntheticEvent) {
@@ -55,10 +49,6 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
       router.push("/");
     }
 
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 5000);
-
     setData({
       email: "",
       password: "",
@@ -74,7 +64,6 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
-      {/* {JSON.stringify(data)} */}
       <form onSubmit={onSubmit}>
         <div className="grid gap-2">
           <div className="grid gap-1">
@@ -92,6 +81,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
               name="email"
               value={data.email}
               onChange={handleChange}
+              className="border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"
             />
           </div>
           <div className="grid gap-1">
@@ -108,9 +98,10 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
               name="password"
               value={data.password}
               onChange={handleChange}
+              className="border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"
             />
           </div>
-          <Button disabled={isLoading}>
+          <Button disabled={isLoading} className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
@@ -133,15 +124,15 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
+        className="border-gray-300 rounded-md px-3 py-2 flex items-center justify-center space-x-2 focus:outline-none focus:ring focus:border-blue-300"
       >
         {isLoading ? (
-          <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          <Icons.spinner className="h-4 w-4 animate-spin" />
         ) : (
-          <Icons.google className="mr-2 h-4 w-4" />
-        )}{" "}
-        Google
+          <Icons.google className="h-4 w-4" />
+        )}
+        <span>Google</span>
       </Button>
-   
     </div>
   );
 }

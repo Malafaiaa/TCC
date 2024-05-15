@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import Image from 'next/image';
 import Link from "next/link";
-import { UserRegisterForm } from "@/components/user-register-auth";
+
 import AuthButton from "@/components/auth-button";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Autenticação",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     "Autenticação utilizando Shadcs-ui Next-Auth (Authjs), prisma e Nextjs 13.4+",
 };
 
-export default async function Register(props) {
+export default async function CompanyLogin(props) {
   return (
-    <div className="container relative py-8 md:py-0 min-h-screen flex flex-col md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+    <div className="container relative py-48 md:py-0 min-h-screen flex flex-col md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
       <AuthButton page="register" />
       <div className="relative hidden md:flex md:h-full">
         <Image
@@ -33,13 +33,13 @@ export default async function Register(props) {
       <div className="lg:p-8 flex justify-center items-center">
         <div className="mx-auto flex flex-col w-full justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="text-2xl font-semibold tracking-tight">Criar Conta</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Login de Empresa</h1>
             <p className="text-sm text-muted-foreground">
-              Preencha com seus dados
+              Entre com os dados da sua empresa
             </p>
           </div>
-          <UserRegisterForm />
-          <p className="px-8 text-center text-sm text-gray-600">
+          
+          <p className="px-8 text-center text-sm text-muted-foreground">
             Ao clicar em continuar, você concorda com nossos{" "}
             <Link
               href="/terms"

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
-
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 
@@ -21,7 +20,6 @@ interface IUser {
 
 export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
   const { toast } = useToast();
-
   const router = useRouter();
 
   const [data, setData] = useState<IUser>({
@@ -62,10 +60,6 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
       router.push("/pages/login");
     }
 
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 5000);
-
     setData({
       name: "",
       email: "",
@@ -82,8 +76,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
-      {/* {JSON.stringify(data)} */}
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="space-y-4">
         <div className="grid gap-2">
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="email">
@@ -91,7 +84,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
             </Label>
             <Input
               id="name"
-              placeholder="nome"
+              placeholder="Nome"
               type="text"
               autoCapitalize="none"
               autoCorrect="off"
@@ -99,6 +92,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               name="name"
               value={data.name}
               onChange={handleChange}
+              className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
           <div className="grid gap-1">
@@ -107,7 +101,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
             </Label>
             <Input
               id="email"
-              placeholder="name@example.com"
+              placeholder="Email"
               type="email"
               autoCapitalize="none"
               autoComplete="email"
@@ -116,6 +110,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               name="email"
               value={data.email}
               onChange={handleChange}
+              className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
           <div className="grid gap-1">
@@ -124,7 +119,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
             </Label>
             <Input
               id="password"
-              placeholder="senha"
+              placeholder="Senha"
               type="password"
               autoCapitalize="none"
               autoCorrect="off"
@@ -132,9 +127,10 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               name="password"
               value={data.password}
               onChange={handleChange}
+              className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
-          <Button disabled={isLoading}>
+          <Button disabled={isLoading} className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
@@ -157,15 +153,15 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
+        className="w-full border-gray-300 py-2 rounded-md flex items-center justify-center space-x-2 focus:outline-none focus:ring focus:border-blue-300"
       >
         {isLoading ? (
-          <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          <Icons.spinner className="h-4 w-4 animate-spin" />
         ) : (
-          <Icons.google className="mr-2 h-4 w-4" />
-        )}{" "}
-        Google
+          <Icons.google className="h-4 w-4 mr-2" />
+        )}
+        <span>Google</span>
       </Button>
-     
     </div>
   );
 }
