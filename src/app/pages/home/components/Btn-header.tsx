@@ -8,13 +8,13 @@ import { MenuIcon } from 'lucide-react'
 import SideMenu from './side-menu'
 
 
-function BtnHeader() {
+function BtnHeader(props) {
     return (
         <>
              <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon">
-              <MenuIcon size={16} />
+            <Button variant="ghost" size="icon">
+              <MenuIcon className='color-black' size={20} />
             </Button>
           </SheetTrigger>
 

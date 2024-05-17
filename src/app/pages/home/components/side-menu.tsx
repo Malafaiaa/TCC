@@ -40,18 +40,21 @@ const SideMenu = (props) => {
                 Login
               </Button>
             </Link>
-            <Link href="/pages/login-company">
-              <Button variant="outline" className="w-full justify-start">
-                <LogInIcon className="mr-2" size={18} />
-                Login empresarial
-              </Button>
-            </Link>
+
             <Link href="/pages/register">
               <Button variant="outline" className="w-full justify-start">
                 <UserPlus className="mr-2" size={18} />
                 Cadastro
               </Button>
             </Link>
+            
+            <Link href="/pages/login-company">
+              <Button variant="outline" className="w-full justify-start">
+                <LogInIcon className="mr-2" size={18} />
+                Login empresarial
+              </Button>
+            </Link>
+           
             <Button variant="outline" className="justify-start" asChild>
           <Link href="/pages/juridico">
             <span className="flex items-center">
@@ -63,10 +66,7 @@ const SideMenu = (props) => {
           </>
         )}
       </div>
-{/* 
-      <div className="flex flex-col gap-3 px-5">
-        
-      </div> */}
+
     </>
   );
 };
