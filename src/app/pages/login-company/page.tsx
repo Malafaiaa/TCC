@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-import AuthButton from "@/components/auth-button";
+
 import Image from 'next/image';
+import { CompanyLoginForm } from "@/components/company-login";
+import AuthButtonCompany from "@/components/auth-company-buttom";
 
 export const metadata: Metadata = {
   title: "Autenticação",
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 export default async function CompanyLogin(props) {
   return (
     <div className="container relative py-48 md:py-0 min-h-screen flex flex-col md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-      <AuthButton page="register" />
+      <AuthButtonCompany page="entrar" />
       <div className="relative hidden md:flex md:h-full">
         <Image
           src="/images/pw.jpg"
@@ -38,6 +40,7 @@ export default async function CompanyLogin(props) {
               Entre com os dados da sua empresa
             </p>
           </div>
+          <CompanyLoginForm></CompanyLoginForm>
           
           <p className="px-8 text-center text-sm text-muted-foreground">
             Ao clicar em continuar, você concorda com nossos{" "}

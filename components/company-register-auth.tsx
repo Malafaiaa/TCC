@@ -59,7 +59,7 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
             });
         } else {
             console.log(response);
-            router.push("/pages/company-login");
+            router.push("/pages/login-company");
         }
 
         setData({

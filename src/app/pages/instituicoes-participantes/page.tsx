@@ -5,7 +5,7 @@ import style from './styles.module.css';
 import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import CardInstituicoes from './components/card-instituicoes';
-
+import { useSession } from 'next-auth/react'; // Importe o hook useSession
 
 interface Institution {
     name: string;
@@ -32,6 +32,7 @@ const CardInstituicao: React.FC<CardInstituicaoProps> = ({ img, name, onClick })
 function InstituicoesParticipantes() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedInstitution, setSelectedInstitution] = useState<Institution>({ name: '', img: '', summary: '' });
+    const { data: session } = useSession(); // Obtenha a sessão do usuário
 
     const openModal = (institutionName: string, institutionImg: string, institutionSummary: string) => {
         setSelectedInstitution({ name: institutionName, img: institutionImg, summary: institutionSummary });
@@ -41,6 +42,15 @@ function InstituicoesParticipantes() {
     const closeModal = () => {
         setModalOpen(false);
     };
+
+    // Verifique se o usuário está autenticado
+    if (!session) {
+        return (
+            <div className={style.message}>
+                <p>Você precisa estar logado para visualizar esta página.</p>
+            </div>
+        ); // Se não estiver autenticado, exibe uma mensagem
+    }
 
     return (
         <>
@@ -85,4 +95,3 @@ function InstituicoesParticipantes() {
 }
 
 export default InstituicoesParticipantes;
-

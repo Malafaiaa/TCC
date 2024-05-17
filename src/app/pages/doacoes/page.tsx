@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import style from './styles.module.css'
 
-export default function Doacoes() {
+export default function Doacoes(props) {
     const [selectedInstitution, setSelectedInstitution] = useState<string | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [opcaoSelecionada, setOpcaoSelecionada] = useState<string | null>(localStorage.getItem('opcaoSelecionada') || null);

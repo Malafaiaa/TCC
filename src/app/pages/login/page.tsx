@@ -33,9 +33,9 @@ export default async function Register(props) {
       <div className="lg:p-8 flex justify-center items-center">
         <div className="mx-auto flex flex-col w-full justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="text-2xl font-semibold tracking-tight">Entrar</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Bem-vindo(a)!</h1>
             <p className="text-sm text-muted-foreground">
-              Entre com seus dados de Login
+            Entre com a sua conta para acessar nossa plataforma
             </p>
           </div>
           <UserLoginForm />
