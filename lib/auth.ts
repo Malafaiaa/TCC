@@ -27,41 +27,58 @@ export const authOptions: NextAuthOptions = {
                 email: { label: "Email", type: "text", placeholder: "" },
                 password: { label: "Password", type: "password" },
                 name: { label: "Name", type: "text", placeholder: "" },
+                cnpj: { label: "cnpj", type: "text", placeholder: "" },
             },
             async authorize(credentials, req): Promise<any> {
-                console.log("Authorize method", credentials)
-
-                if (!credentials?.email || !credentials?.password) {
-                    throw new Error("Dados de Login necessários")
+                console.log("Authorize method", credentials);
+        
+                if ((!credentials?.email && !credentials?.cnpj) || !credentials?.password) {
+                  throw new Error("Dados de Login necessários");
                 }
-
-                const user = await prisma.user.findUnique({
+        
+                let user;
+        
+                if (credentials.cnpj) {
+                  user = await prisma.user.findUnique({
                     where: {
-                        email: credentials?.email
-                    }
-                })
-
-                console.log("USER", user)
-
+                      cnpj: credentials.cnpj,
+                    },
+                  });
+        
+                  if (!user) {
+                    throw new Error("CNPJ não encontrado");
+                  }
+                } else if (credentials.email) {
+                  user = await prisma.user.findUnique({
+                    where: {
+                      email: credentials.email,
+                    },
+                  });
+        
+                  if (!user) {
+                    throw new Error("Email não encontrado");
+                  }
+                }
+        
                 if (!user || !user.hashedPassword) {
-                    throw new Error("Usuário não registrado através de credenciais")
+                  throw new Error("Usuário não registrado através de credenciais");
                 }
-
-                const matchPassword = await bcrypt.compare(credentials.password, user.hashedPassword)
+        
+                const matchPassword = await bcrypt.compare(credentials.password, user.hashedPassword);
                 if (!matchPassword) {
-                    throw new Error("Senha incorreta")
+                  throw new Error("Senha incorreta");
                 }
-
-                return user
-            }
-        })
-    ],
-    session: {
-        strategy: "jwt"
-    },
-    secret: process.env.SECRET,
-    debug: process.env.NODE_ENV === "development",
-    pages: {
-        signIn: "/pages/login-register"
-    }
-}
+        
+                return user;
+              },
+            }),
+          ],
+          session: {
+            strategy: "jwt",
+          },
+          secret: process.env.SECRET,
+          debug: process.env.NODE_ENV === "development",
+          pages: {
+            signIn: "/pages/login",
+          },
+        };
