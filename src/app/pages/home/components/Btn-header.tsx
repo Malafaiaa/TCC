@@ -8,7 +8,7 @@ import { MenuIcon } from 'lucide-react'
 import SideMenu from './side-menu'
 
 
-function BtnHeader(props) {
+function BtnHeader(props: any) {
     return (
         <>
              <Sheet>

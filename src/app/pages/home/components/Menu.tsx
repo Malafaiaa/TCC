@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-scroll';
 import "../styles.css";
 
-function Menu(props) {
+function Menu(props: any) {
     const { data: session } = useSession();
     const isAuthenticated = !!session; // Verifica se há uma sessão ativa
 
@@ -19,7 +19,8 @@ function Menu(props) {
             {isAuthenticated && <a href="/publications">Publicações</a>}
             <a href="/pages/instituicoes-participantes">Instituições Participantes</a>
             <Link to="about_us" spy={true} smooth={true} offset={-100} duration={600}>Sobre Nós</Link>
-            <Link to="section_data" spy={true} smooth={true} offset={-100} duration={600}>Porque Doar?</Link>
+            <Link to="section_data" spy={true} smooth={true} offset={-100} duration={600}>Por que Doar?</Link>
+            <Link to="section-services" spy={true} smooth={true} offset={-100} duration={800}>Serviços</Link>
         </div>
     );
 }

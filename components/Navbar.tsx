@@ -18,6 +18,7 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons1";
+import { Link } from 'react-scroll';
 import { StarHalf } from 'lucide-react';
 import BtnHeader from "@/src/app/pages/home/components/Btn-header";
 interface RouteProps {
@@ -28,7 +29,7 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "#home",
-    label: "doaÇON",
+    label: "doaçON",
   },
   {
     href: "#about",
@@ -45,7 +46,7 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
-  
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -57,10 +58,10 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <StarHalf />
-              doaÇON
+              doaçON
             </a>
           </NavigationMenuItem>
-          
+
           {/* desktop navegação */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
@@ -68,7 +69,7 @@ export const Navbar = () => {
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
-                className={`text-[17px] ${buttonVariants({
+                className={ `  spy={true} smooth={true} offset={-100} duration={600} text-[17px] ${buttonVariants({
                   variant: "ghost",
                 })}`}
               >
@@ -78,10 +79,10 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-           
-           
-           <BtnHeader />
-            
+
+
+            <BtnHeader />
+
           </div>
         </NavigationMenuList>
       </NavigationMenu>

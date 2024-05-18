@@ -9,26 +9,44 @@ import { Sponsors } from "@/components/Sponsors";
 import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
 import Footer from "../home/components/Footer";
+import Header from "./components/Header";
+import SectionLandinPage from "./components/Section-landing-page";
+import SectionData from "./components/Section-data";
+import SectionAboutUs from "./components/Section-about";
+import SectionServices from "./components/Section-services";
+import SectionDuvidas from "./components/Section-duvidas";
 
 function App(
 ) {
     return (
         <>
-            <Navbar />
+            <SectionLandinPage />
             <Hero />
             <Sponsors />
-            <About />
-            <HowItWorks />
+
+
 
             <Services />
 
-            <Testimonials />
-            <Team />
+
 
 
 
             <Footer />
             <ScrollToTop />
+
+
+            <Header />
+
+            <SectionData />
+            <About />
+            <HowItWorks />
+            <SectionAboutUs />
+            <SectionServices />
+            <Testimonials />
+            <Team />
+            <SectionDuvidas />
+
         </>
     );
 }

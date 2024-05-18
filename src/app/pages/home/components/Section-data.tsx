@@ -37,6 +37,7 @@ export default function SectionCadastroEmpresas(props: any) {
                     </div>
                 </div>
             </div>
+            
         </section>
     );
 }
