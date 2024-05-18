@@ -56,8 +56,8 @@ const teamList: TeamProps[] = [
   },
   {
     imageUrl: "https://i.pinimg.com/564x/d5/ea/7a/d5ea7a91674c24d02f6311036b2ced38.jpg",
-    name: "João Balão",
-    position: "Frontend Developer",
+    name: "João Sant",
+    position: "Desenvolvedor FullStack",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
 
@@ -73,7 +73,7 @@ const teamList: TeamProps[] = [
   },
   {
     imageUrl: "https://i.pinimg.com/564x/b0/39/1a/b0391af60d8fec242187bb3b8ddfbbc4.jpg",
-    name: "Bruce Rogers",
+    name: "Mariah Godoy",
     position: "Frontend Developer",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },

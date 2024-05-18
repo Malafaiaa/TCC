@@ -2,6 +2,7 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons1";
 import cubeLeg from "../assets/cube-leg.png";
+import BackgroundSVG2 from "@/src/app/pages/home/components/Background2SVG";
 
 interface ServiceProps {
   title: string;
@@ -36,7 +37,7 @@ export const Services = () => {
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
 
-        <h1>Centrado no Usuário</h1>
+        <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-2xl dark:text-white">Centrado no Usuário</h1>
           <h2 className="text-3xl md:text-4xl font-bold">
             
             
@@ -66,11 +67,12 @@ export const Services = () => {
         </div>
 
         <img
-          src={ "/images/pw.jpg"}
+          src={ "/images/centradoU.svg"}
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           alt="About services"
         />
       </div>
+      
     </section>
   );
 };

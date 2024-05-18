@@ -14,38 +14,53 @@ import SectionLandinPage from "./components/Section-landing-page";
 import SectionData from "./components/Section-data";
 import SectionAboutUs from "./components/Section-about";
 import SectionServices from "./components/Section-services";
-import SectionDuvidas from "./components/Section-duvidas";
+import SectionDuvidas from "./components/section-duvidas";
+import BackgroundSVG from "./components/BackgroundSVG";
+import BackgroundSVG2 from "./components/Background2SVG";
 
-function App(
-) {
+
+function App(props) {
     return (
         <>
-            <SectionLandinPage />
+        
+           <Navbar></Navbar>
+           <BackgroundSVG></BackgroundSVG>
+           
             <Hero />
-            <Sponsors />
+            
+            
+         
 
 
 
             <Services />
+           
+            
 
 
 
 
 
-            <Footer />
+       
             <ScrollToTop />
 
+            
+            
 
-            <Header />
-
-            <SectionData />
+          
             <About />
             <HowItWorks />
-            <SectionAboutUs />
+            
+        
             <SectionServices />
+            
             <Testimonials />
             <Team />
+
+
             <SectionDuvidas />
+
+            
 
         </>
     );

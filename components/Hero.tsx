@@ -10,14 +10,14 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              doaçON
+            <span className="inline bg-gradient-to-r from-[#0066cc]  to-[#004c97] text-transparent bg-clip-text">
+              DoaçON
             </span>{" "}
              a plataforma
           </h1>{" "}
           que gera{" "}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-[#0066cc]  to-[#004c97] text-transparent bg-clip-text">
               Amor
             </span>{" "}
            

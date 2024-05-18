@@ -103,7 +103,7 @@ export const HeroCards = () => {
                   key={benefit}
                   className="flex"
                 >
-                  <Heart className="text-pink-600" />{" "}
+                  <Heart className="text-blue-900" />{" "}
                   <h3 className="ml-2">{benefit}</h3>
                 </span>
               )
@@ -119,9 +119,9 @@ export const HeroCards = () => {
             <LightBulbIcon />
           </div>
           <div>
-            <CardTitle>doaÇON</CardTitle>
+            <CardTitle>DoaçON</CardTitle>
             <CardDescription className="text-md mt-2">
-              A doaÇON tem impacto direto com milhares de doaçôes e causas carentes.
+              A DoaçON tem impacto direto com milhares de doaçôes e causas carentes.
             </CardDescription>
           </div>
         </CardHeader>
