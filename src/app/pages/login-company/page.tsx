@@ -35,9 +35,9 @@ export default async function CompanyLogin(props) {
       <div className="lg:p-8 flex justify-center items-center">
         <div className="mx-auto flex flex-col w-full justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="text-2xl font-semibold tracking-tight">Login de Empresa</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Login de Ong</h1>
             <p className="text-sm text-muted-foreground">
-              Entre com os dados da sua empresa
+              Entre com os dados da sua instituição
             </p>
           </div>
           <CompanyLoginForm></CompanyLoginForm>

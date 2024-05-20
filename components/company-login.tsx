@@ -46,7 +46,7 @@ export function CompanyLoginForm({ className, ...props }: CompanyAuthFormProps) 
         ),
       });
     } else {
-      router.push("/");
+      router.push("/pages/juridico");
     }
 
     setData({

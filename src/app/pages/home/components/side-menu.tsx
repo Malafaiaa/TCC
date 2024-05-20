@@ -51,7 +51,7 @@ const SideMenu = (props) => {
             <Link href="/pages/login-company">
               <Button variant="outline" className="w-full justify-start">
                 <LogInIcon className="mr-2" size={18} />
-                Login empresarial
+                Login Institucional
               </Button>
             </Link>
            
@@ -59,7 +59,7 @@ const SideMenu = (props) => {
           <Link href="/pages/juridico">
             <span className="flex items-center">
               <UserIcon size={18} className="mr-2" />
-              Sou uma empresa
+              Sou uma Ong/Instituição
             </span>
           </Link>
         </Button>

@@ -53,12 +53,16 @@ function App(props) {
             
         
             <SectionServices />
+
+            <SectionDuvidas />
             
             <Testimonials />
+
+
             <Team />
 
 
-            <SectionDuvidas />
+           
 
             
 
