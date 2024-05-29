@@ -1,26 +1,37 @@
-"use client"
+'use client'
 
-import Header from "../home/components/Header"
-import HeaderEmpresa from "../home/components/Header-empresa"
-import SectionAboutUs from "../home/components/Section-about"
-import SectionBeneficiosEmpresas from "../home/components/Section-about-empresa"
-import SectionCadastroEmpresas from "../home/components/Section-data"
-import SectionData from "../home/components/Section-data"
-import SectionLandinPage from "../home/components/Section-landing-page"
-import SectionLandinPageEmpresas from "../home/components/Section-landing-page-empresas"
-import SectionServices from "../home/components/Section-services"
+import React from "react";
+import { Navbar } from "@/components/Navbar";
+import BackgroundSVG from "./components/BackgroundSVG";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { About } from "@/components/About";
+import { HowItWorks } from "@/components/HowItWorks";
+import SectionServices from "./components/Section-services";
+import SectionDuvidas from "./components/Section-duvidas";
+import { Testimonials } from "@/components/Testimonials";
+import { Team } from "@/components/Team";
 
 
+function App(props: any) {
+    return (
+        <>
+        
+            <Navbar></Navbar>
+            <BackgroundSVG></BackgroundSVG>
+            <Hero />
+            <Services />
+            <ScrollToTop />
+            <About />
+            <HowItWorks />
+            <SectionServices />
+            <SectionDuvidas />
+            <Testimonials />
+            <Team />
 
-export default function juridico(props){
-    return(<>
- <HeaderEmpresa/>
-    <SectionLandinPageEmpresas />
-    <SectionCadastroEmpresas />
-    <SectionBeneficiosEmpresas />
-   
-    
-    
-
-    </>)
+        </>
+    );
 }
+
+export default App;

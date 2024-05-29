@@ -19,7 +19,7 @@ import BackgroundSVG from "./components/BackgroundSVG";
 import BackgroundSVG2 from "./components/Background2SVG";
 
 
-function App(props) {
+function App(props: any) {
     return (
         <>
         

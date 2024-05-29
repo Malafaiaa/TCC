@@ -8,12 +8,19 @@ export default function SectionServices(props: any) {
             <div className={style.container_section_services}>
 
 
+
+
+
                 <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Além disso</h1>
                 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Doar nunca foi tão fácil !</h1>
                 <p className="mb-6 text-lg max-w-screen-xl text-center font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique ipsum et quidem deserunt corporis odio, quas ullam iure obcaecati libero velit provident accusamus explicabo ex praesentium.</p>
                 <p className="mb-6  inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                     Veja o passo a passo
                 </p>
+
+
+
+
 
 
                 <ol className="relative border-s border-gray-200 dark:border-gray-700">
