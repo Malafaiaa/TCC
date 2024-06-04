@@ -11,23 +11,23 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     icon: <MedalIcon />,
-    title: "Acessibilidade",
-    description: "Plataforma fácil de usar para incentivar doações.",
+    title: "🚀 Voe Mais Alto",
+    description: "Em nossa plataforma, sua organização terá o espaço e os recursos para alçar voos ainda mais altos em direção aos seus objetivos. Com ferramentas intuitivas e poderosas, vocês podem criar campanhas que tocam os corações de doadores generosos em todos os cantos do mundo.",
   },
   {
     icon: <MapIcon />,
-    title: "Comunidade",
-    description: "Promove a conexão entre doadores e beneficiários.",
+    title: "🌍 Conecte-se com o Mundo",
+    description: "Não importa onde estejam, as barreiras geográficas desaparecem quando vocês se juntam a nós. Conectem-se instantaneamente com uma rede global de apoiadores apaixonados, prontos para fazer a diferença ao seu lado.",
   },
   {
     icon: <PlaneIcon />,
-    title: "Escalabilidade",
-    description: "Modelo sustentável que pode ser replicado em outras regiões.",
+    title: "💡 Inovação com Propósito",
+    description: "Abraçamos a tecnologia com um propósito claro: impulsionar o bem no mundo. Com as mais recentes inovações em doações online, estamos redefinindo o que é possível e capacitando organizações como a sua a alcançar novos horizontes de sucesso.",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamificação",
-    description: "Incentiva a participação através de gratificação e reconhecimento.",
+    title: "🤝 Parceiros de Confiança",
+    description: " Aqui, vocês encontrarão mais do que uma plataforma; encontrarão verdadeiros parceiros comprometidos com sua causa. Nossa equipe dedicada está pronta para apoiá-los em cada passo do caminho, garantindo que suas iniciativas recebam o reconhecimento e o apoio que merecem.",
   },
 ];
 

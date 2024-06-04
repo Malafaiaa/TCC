@@ -4,7 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import AuthProvider from "@/components/auth-provider";
 import { cn } from "@/lib/utils";
-import Footer from "./pages/home/components/Footer"; // Importe o componente Footer
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "")}>
         <Toaster />
         <AuthProvider>{children}</AuthProvider>
-        <Footer /> {/* Adicione o componente Footer aqui */}
+       
       </body>
     </html>
   );
