@@ -23,49 +23,18 @@ function App(props: any) {
     return (
         <>
         
-           <Navbar></Navbar>
-           <BackgroundSVG></BackgroundSVG>
-           
+            <Navbar></Navbar>
+            <BackgroundSVG></BackgroundSVG>
             <Hero />
-            
-            
-         
-
-
-
             <Services />
-           
-            
-
-
-
-
-
-       
             <ScrollToTop />
-
-            
-            
-
-          
             <About />
             <HowItWorks />
-            
-        
             <SectionServices />
-
             <SectionDuvidas />
-            
             <Testimonials />
-
-
             <Team />
-
-
-           
-
             
-
         </>
     );
 }

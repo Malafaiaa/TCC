@@ -10,7 +10,7 @@ export default function SectionDuvidas(props: any) {
     return (
         <section className={style.section_duvidas} id={style.section_duvidas}>
             <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
-                <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-gray-100 mb-6">Frequently Asked Questions</h2>
+                <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-gray-100 mb-6">Perguntas Frequentes</h2>
 
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">

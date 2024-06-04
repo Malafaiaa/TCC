@@ -59,18 +59,18 @@ const testimonials: TestimonialProps[] = [
   },
 ];
 
-export const Testimonials = () => {
+export const TestimonialsJuridico = () => {
   return (
     <section
       id="testemunhas"
       className="container py-24 sm:py-32"
     >
       <h2 className="text-center text-3xl md:text-4xl font-bold">
-        Descubra porque as pessoas amam esta plataforma
+        Descubra porque as Instituições amam esta plataforma
       </h2>
 
       <p className=" text-center text-xl text-muted-foreground pt-4 pb-8">
-        Veja o que nossos usuários dizem sobre como a plataforma transformou suas experiências de doação.
+        Veja o que nossas Instituição participantes dizem sobre como a plataforma transformou suas experiências de doação.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2 lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">

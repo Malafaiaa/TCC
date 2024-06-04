@@ -30,11 +30,11 @@ const teamList: TeamProps[] = [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
         name: "Github",
-        url: "https://www.facebook.com/",
+        url: "https://github.com/Malafaiaa",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/malafacoin/",
       },
     ],
   },
@@ -46,11 +46,11 @@ const teamList: TeamProps[] = [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
         name: "Github",
-        url: "https://www.facebook.com/",
+        url: "https://github.com/GabrielGodinhoReis",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/godinho_444/",
       },
     ],
   },
@@ -63,11 +63,11 @@ const teamList: TeamProps[] = [
 
       {
         name: "Github",
-        url: "https://www.instagram.com/",
+        url: "https://github.com/joao-santvi",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/joao.hrqz/",
       },
     ],
   },
@@ -83,7 +83,7 @@ const teamList: TeamProps[] = [
       },
       {
         name: "Instagram",
-        url: "https://www.facebook.com/",
+        url: "https://www.instagram.com/md.godoy_/ss",
       },
     ],
   },

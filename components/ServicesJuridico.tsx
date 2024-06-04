@@ -31,20 +31,20 @@ const serviceList: ServiceProps[] = [
   },
 ];
 
-export const Services = () => {
+export const ServicesJuridico = () => {
   return (
     <section className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
 
-        <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-2xl dark:text-white">Centrado no Usuário</h1>
+        <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-2xl dark:text-white">Centrado na Instituição</h1>
           <h2 className="text-3xl md:text-4xl font-bold">
             
             
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Nossa plataforma promove a cultura da doação, conectando doadores e beneficiários de maneira eficaz e transparente.
+            Nossa plataforma promove a cultura da doação, conectando doadores e Instituição de maneira eficaz e transparente.
           </p>
 
           <div className="flex flex-col gap-8">

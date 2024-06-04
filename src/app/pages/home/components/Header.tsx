@@ -13,7 +13,6 @@ function Header(props: any) {
                 </a>
                 <Menu />
                 <BtnHeader />
-                
             </div>
         </>
     )
