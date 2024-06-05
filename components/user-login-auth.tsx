@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/Icons";
+import { Icons } from "@/components/icons";
 import { signIn } from "next-auth/react";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";

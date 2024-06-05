@@ -57,6 +57,25 @@ model User {
   accounts       Account[]
   sessions       Session[]
 }
+model Ong {
+  id       String    @id @default(uuid())
+  name     String
+  address  String
+  imageUrl String
+  telefone String
+  email String
+  donations donation[]
+  
+}
+
+model donation {
+  id           String     @id @default(uuid())
+  name         String
+  ongId String
+  ong  Ong @relation(fields: [ongId], references: [id])
+  description  String
+  imageUrl     String
+}
 
 model VerificationRequest {
   id         String   @id @default(cuid())

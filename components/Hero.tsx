@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -29,7 +30,7 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className=" w-full md:w-1/3 text-white ">Doar</Button>
+         <Link href="/pages/instituicoes-participantes"> <Button className=" w-full md:w-1/3 text-white ">Doar</Button></Link>
         
 
         

@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export const HeroJuridico = () => {
   return (
@@ -29,7 +30,7 @@ export const HeroJuridico = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className=" w-full md:w-1/3 text-white ">Cadastre a Sua Instituição</Button>
+          <Link href="/pages/add-cadastro"> <Button className=" w-full md:w-1/3 text-white ">Cadastre a Sua Instituição</Button></Link>
         
 
         
