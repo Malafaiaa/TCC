@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { MenuIcon } from 'lucide-react'
 import SideMenu from './side-menu'
+import SideMenu2 from './side-menu2'
 
 
 function BtnHeader(props) {
@@ -19,7 +20,7 @@ function BtnHeader(props) {
           </SheetTrigger>
 
           <SheetContent className="p-0">
-            <SideMenu></SideMenu>
+            <SideMenu2></SideMenu2>
           </SheetContent>
         </Sheet>
       

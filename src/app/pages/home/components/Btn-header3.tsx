@@ -4,11 +4,13 @@ import "../styles.css"
 import BtnJuridico from './Btn-juridico'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+
+
 import { MenuIcon } from 'lucide-react'
-import SideMenu from './side-menu'
+import SideMenu3 from './sidemenu3'
 
 
-function BtnHeader(props) {
+function BtnHeader3(props) {
     return (
         <>
              <Sheet>
@@ -19,7 +21,7 @@ function BtnHeader(props) {
           </SheetTrigger>
 
           <SheetContent className="p-0">
-            <SideMenu></SideMenu>
+            <SideMenu3></SideMenu3>
           </SheetContent>
         </Sheet>
       
@@ -28,7 +30,7 @@ function BtnHeader(props) {
     )
 }
 
-export default BtnHeader
+export default BtnHeader3
 
 
 {/* <div className="btns-header">

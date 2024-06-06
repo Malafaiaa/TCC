@@ -4,7 +4,7 @@ import { LogInIcon, LogOutIcon, UserIcon, UserPlus } from "lucide-react";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 
-const SideMenu = (props) => {
+const SideMenu3 = (props) => {
   const { data: session } = useSession();
   const isAuthenticated = session?.user;
   const userName = session?.user?.name;
@@ -23,7 +23,7 @@ const SideMenu = (props) => {
         <div className="flex items-center gap-2">
           <UserIcon size={32} />
           <h2 className="font-bold">
-            {isAuthenticated ? `Olá, ${userName}` : "Olá, faça seu login ou crie uma conta!"}
+            {isAuthenticated ? `Olá, ${userName}` : "Olá, faça seu login!"}
           </h2>
         </div>
 
@@ -34,23 +34,22 @@ const SideMenu = (props) => {
           </Button>
         ) : (
           <>
-            <Link href="/pages/login">
+          <Link href="/pages/login">
               <Button variant="outline" className="w-full justify-start">
                 <LogInIcon className="mr-2" size={18} />
                 Login
               </Button>
             </Link>
-
-            <Link href="/pages/register">
+           
+            
+            <Link href="/pages/login-company">
               <Button variant="outline" className="w-full justify-start">
-                <UserPlus className="mr-2" size={18} />
-                Cadastro
+                <LogInIcon className="mr-2" size={18} />
+                Login Institucional
               </Button>
             </Link>
-            
            
            
-            
           </>
         )}
       </div>
@@ -59,4 +58,4 @@ const SideMenu = (props) => {
   );
 };
 
-export default SideMenu;
+export default SideMenu3;

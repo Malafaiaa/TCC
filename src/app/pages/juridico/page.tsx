@@ -12,13 +12,14 @@ import { Team } from "@/components/Team";
 import { TestimonialsJuridico } from "@/components/TestimonialsJuridico";
 import { HowItWorksJuridico } from "@/components/HowItWorksJuridico";
 import { ServicesJuridico } from "@/components/ServicesJuridico";
+import { NavbarJuridico } from "@/components/NavbarJuridico";
 
 
-function App(props: any) {
+function App(props) {
     return (
         <>
         
-            <Navbar></Navbar>
+            <NavbarJuridico></NavbarJuridico>
             {/* <BackgroundSVG></BackgroundSVG> */}
             <HeroJuridico />
             <SectionServices />
