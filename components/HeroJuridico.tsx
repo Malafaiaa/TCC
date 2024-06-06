@@ -30,7 +30,7 @@ export const HeroJuridico = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link href="/pages/add-cadastro"> <Button className=" w-full md:w-1/3 text-white ">Cadastre a Sua Instituição</Button></Link>
+          <Link href="/pages/add-cadastro"> <Button className=" w-full md:w-1/3 text-white ">Cadastre a sua Instituição</Button></Link>
         
 
         

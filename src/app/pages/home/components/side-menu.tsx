@@ -16,7 +16,7 @@ const SideMenu = (props: any) => {
   return (
     <>
       <SheetHeader className="text-left  border-secondary p-5">
-        <SheetTitle>...</SheetTitle>
+        <SheetTitle>DoaçON</SheetTitle>
       </SheetHeader>
 
       <div className="flex flex-col px-5 py-6 gap-3">

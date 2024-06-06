@@ -19,7 +19,7 @@ function App(props: any) {
         <>
         
             <Navbar></Navbar>
-            <BackgroundSVG></BackgroundSVG>
+            {/* <BackgroundSVG></BackgroundSVG> */}
             <HeroJuridico />
             <SectionServices />
             <ServicesJuridico />

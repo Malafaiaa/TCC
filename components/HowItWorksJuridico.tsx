@@ -38,7 +38,7 @@ export const HowItWorksJuridico = () => {
       className="container text-center py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold">
-      <p> BENEFÍCIOS </p>
+      <p> Benefícios </p>
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
         Saiba como nossa plataforma promove a cultura da doação e conecta doadores a beneficiários de forma fácil e eficaz.

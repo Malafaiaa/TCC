@@ -12,12 +12,12 @@ import BackgroundSVG from "./components/BackgroundSVG";
 
 
 
-function App(props: any) {
+function    App(props: any) {
     return (
         <>
         
             <Navbar></Navbar>
-            <BackgroundSVG></BackgroundSVG>
+            {/* <BackgroundSVG></BackgroundSVG> */}
             <Hero />
             <Services />
             <ScrollToTop />
