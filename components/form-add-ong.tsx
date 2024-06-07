@@ -98,6 +98,7 @@ export function AddOngForm({ className, ...props }: UserAuthFormProps) {
               name="name"
               value={data.name}
               onChange={handleChange}
+              required
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
@@ -116,6 +117,7 @@ export function AddOngForm({ className, ...props }: UserAuthFormProps) {
               name="email"
               value={data.email}
               onChange={handleChange}
+              required
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
@@ -133,6 +135,7 @@ export function AddOngForm({ className, ...props }: UserAuthFormProps) {
               name="address"
               value={data.address}
               onChange={handleChange}
+              required
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
@@ -150,6 +153,7 @@ export function AddOngForm({ className, ...props }: UserAuthFormProps) {
               name="telefone"
               value={data.telefone}
               onChange={handleChange}
+              required
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
@@ -167,6 +171,7 @@ export function AddOngForm({ className, ...props }: UserAuthFormProps) {
               name="imageUrl"
               value={data.imageUrl}
               onChange={handleChange}
+              required
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
