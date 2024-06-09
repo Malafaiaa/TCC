@@ -56,25 +56,40 @@ model User {
   updatedAt      DateTime  @updatedAt
   accounts       Account[]
   sessions       Session[]
+  Booking        Booking[]
 }
+
 model Ong {
-  id       String    @id @default(uuid())
-  name     String
-  address  String
-  imageUrl String
-  telefone String
-  email String
+  id        String     @id @default(uuid())
+  name      String
+  address   String
+  imageUrl  String
+  telefone  String
+  email     String
   donations donation[]
-  
+
+  Booking Booking[]
 }
 
 model donation {
-  id           String     @id @default(uuid())
-  name         String
-  ongId String
-  ong  Ong @relation(fields: [ongId], references: [id])
-  description  String
-  imageUrl     String
+  id          String    @id @default(uuid())
+  name        String
+  ongId       String
+  ong         Ong       @relation(fields: [ongId], references: [id])
+  description String
+  imageUrl    String
+  Booking     Booking[]
+}
+
+model Booking {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  donationId String
+  donation   donation @relation(fields: [donationId], references: [id])
+  ongId      String
+  ong        Ong      @relation(fields: [ongId], references: [id])
+  date       DateTime
 }
 
 model VerificationRequest {

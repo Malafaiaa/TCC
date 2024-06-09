@@ -9,13 +9,14 @@ import { Button } from "./ui/button";
 
 interface OngItemProps {
  ong: Ong;
+
 }
 
 const OngItem = ({ ong }: OngItemProps) => {
   const router = useRouter();
 
   const handleDonationClick = () => {
-    router.push(`/${ong.id}`);
+    router.push(`/pages/ongs/${ong.id}`);
   };
 
   return (
