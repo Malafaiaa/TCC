@@ -8,14 +8,13 @@ import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
 import SectionServices from "./components/Section-services";
 import SectionDuvidas from "./components/section-duvidas";
-import BackgroundSVG from "./components/BackgroundSVG";
+
 
 
 
 function    App(props: any) {
     return (
         <>
-        
             <Navbar></Navbar>
             {/* <BackgroundSVG></BackgroundSVG> */}
             <Hero />
@@ -27,7 +26,6 @@ function    App(props: any) {
             <SectionDuvidas />
             <Testimonials />
             <Team />
-            
         </>
     );
 }

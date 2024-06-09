@@ -1,9 +1,7 @@
 "use client"
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import ImgJuridico from "@/src/app/pages/juridico/components/IMG-juridico";
 
 export const HeroJuridico = () => {
   return (
@@ -37,13 +35,15 @@ export const HeroJuridico = () => {
         </div>
       </div>
 
-     
-     
-     
+      {/* image do home juridico */}
+      <ImgJuridico/> 
+      {/* image do home juridico */}
      
 
       {/* Shadow effect */}
       <div className="shadow"></div>
+      
     </section>
+   
   );
 };

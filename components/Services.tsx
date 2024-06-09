@@ -1,8 +1,7 @@
 "use client";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons1";
-import cubeLeg from "../assets/cube-leg.png";
-import BackgroundSVG2 from "@/src/app/pages/home/components/Background2SVG";
+
 
 interface ServiceProps {
   title: string;

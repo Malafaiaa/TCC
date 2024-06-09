@@ -1,8 +1,6 @@
 'use client'
 
 import React from "react";
-import { Navbar } from "@/components/Navbar";
-import BackgroundSVG from "./components/BackgroundSVG";
 import { HeroJuridico } from "@/components/HeroJuridico";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { About } from "@/components/About";
@@ -15,7 +13,8 @@ import { ServicesJuridico } from "@/components/ServicesJuridico";
 import { NavbarJuridico } from "@/components/NavbarJuridico";
 
 
-function App(props) {
+
+function App(props: any) {
     return (
         <>
         
@@ -30,7 +29,6 @@ function App(props) {
             <SectionDuvidas />
             <TestimonialsJuridico />
             <Team />
-
         </>
     );
 }
