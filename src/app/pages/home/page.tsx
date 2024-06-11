@@ -16,7 +16,6 @@ function    App(props: any) {
     return (
         <>
             <Navbar></Navbar>
-            {/* <BackgroundSVG></BackgroundSVG> */}
             <Hero />
             <Services />
             <ScrollToTop />

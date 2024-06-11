@@ -17,9 +17,7 @@ import { NavbarJuridico } from "@/components/NavbarJuridico";
 function App(props: any) {
     return (
         <>
-        
             <NavbarJuridico></NavbarJuridico>
-            {/* <BackgroundSVG></BackgroundSVG> */}
             <HeroJuridico />
             <SectionServices />
             <ServicesJuridico />
