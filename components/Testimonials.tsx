@@ -17,43 +17,43 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: "/images/1.jpeg",
-    name: "Stewie Griffin",
-    userName: "@Griffin Maromba",
+    image: "/images/perfil1.jpg",
+    name: "Sofia Monteiro",
+    userName: "@SoffiMonteiro01",
     comment: "A plataforma facilitou muito as minhas doações. É intuitiva e eficiente!",
   },
   {
-    image: "/images/2.jpeg",
-    name: "Stewie Griffin 1939",
-    userName: "@1939",
+    image: "/images/perfil2.jpg",
+    name: "Júlia Alves",
+    userName: "@juju.alvessz",
     comment:
       "Conectar com beneficiários nunca foi tão fácil. A gestão de doações é incrível.",
   },
   {
-    image: "/images/3.jpeg",
-    name: "Cartman",
-    userName: "@1939",
+    image: "/images/perfil3.jpg",
+    name: "Henrique Oliveira",
+    userName: "@henrique.oli",
     comment:
       "A automação de tarefas simplificou o processo de doação, tornando tudo mais rápido e seguro.",
   },
   {
-    image:"/images/4.jpeg",
-    name: "Butters",
-    userName: "@ButtersStotch",
+    image:"/images/perfil4.jpg",
+    name: "Patrícia Vieira",
+    userName: "@paty.vieira1",
     comment:
       "A transparência da plataforma me deu confiança para doar regularmente. Recomendo a todos!",
   },
   {
-    image: "/images/5.jpeg",
-    name: "CartmanKKK",
-    userName: "@Kartman",
+    image: "/images/perfil5.jpg",
+    name: "Sabrina Martins",
+    userName: "@sasa.martins005",
     comment:
       "Ótima experiência! A plataforma realmente promove a cultura da doação de forma inovadora.",
   },
   {
-    image: "/images/6.jpeg",
-    name: "Kenny",
-    userName: "@morremorre",
+    image: "/images/perfil6.jpg",
+    name: "Renan Reis",
+    userName: "@renanZ.0001",
     comment:
       "Participar dessa comunidade de doadores tem sido extremamente gratificante. Adoro a interface!",
   },

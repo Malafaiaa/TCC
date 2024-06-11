@@ -24,14 +24,14 @@ export const HeroCards = () => {
           <Avatar>
             <AvatarImage
               alt=""
-              src="/images/godi.jpg"
+              src="/images/perfil1.jpg"
             />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Gabriel Godinho</CardTitle>
-            <CardDescription>@d3_xl</CardDescription>
+            <CardTitle className="text-lg">Sofia Monteiro</CardTitle>
+            <CardDescription>@SoffiMonteiro01</CardDescription>
           </div>
         </CardHeader>
 
@@ -42,19 +42,19 @@ export const HeroCards = () => {
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src= "/images/pika.jpeg"
+            src= "/images/ong-abraco-quentinho.jpg"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
-          <CardTitle className="text-center">Kura</CardTitle>
+          <CardTitle className="text-center">Abraço Quentinho</CardTitle>
           <CardDescription className="font-normal text-red-600">
-            Clã Kurta
+            Instituição Parceira
           </CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
           <p>
-          "Eu não temo a morte. Eu só temo que minha raiva desapareça."                                                                                                                       
+          "Amor é um sentimento humano que mantém as pessoas conectadas e comprometidas umas com as outras."                                                                                                                       
           </p>
         </CardContent>
 
@@ -68,7 +68,7 @@ export const HeroCards = () => {
       <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
       <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src= "/images/jao.jpg"
+            src= "/images/perfil6.jpg"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
@@ -86,7 +86,7 @@ export const HeroCards = () => {
           </div>
 
           <CardDescription className="text-center text-black">
-            João foi o maior contribuibudor do mês, seja você o proximo!
+            Renan foi o maior contribuibudor do mês, seja você o proximo!
           </CardDescription>
         </CardHeader>
 

@@ -15,26 +15,25 @@ export default function SectionDuvidas(props: any) {
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-b-0 border-gray-300 rounded-t-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it accessible?
+                            Posso doar itens físicos ou apenas dinheiro?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-b-0 border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It adheres to the WAI-ARIA design pattern.
-                        </AccordionContent>
+                            Somente doações de forma digital, como pix e outros meios de pagamento!                      </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-b-0 border-gray-300 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it styled?
+                            Posso escolher para onde minha doação será direcionada?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-b-0 border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It comes with default styles that match the other components' aesthetic.
+                            Sim, ao fazer a doação, você pode selecionar um projeto ou causa específica para onde gostaria que seu dinheiro fosse destinado.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-b-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it animated?
+                            Como posso ter certeza de que minha doação está sendo usada corretamente?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It's animated by default, but you can disable it if you prefer.
+                            Somos uma organização transparente e publicamos relatórios financeiros anuais detalhando como as doações são utilizadas.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

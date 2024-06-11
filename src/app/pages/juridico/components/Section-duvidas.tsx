@@ -15,26 +15,26 @@ export default function SectionDuvidas(props: any) {
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-b-0 border-gray-300 rounded-t-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it accessible?
+                            Como são utilizados os recursos doados por instituições?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-b-0 border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It adheres to the WAI-ARIA design pattern.
+                            Os recursos doados são usados para financiar nossos projetos e programas sociais. Garantimos total transparência e prestamos contas regularmente sobre como os fundos são aplicados.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-b-0 border-gray-300 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it styled?
+                            Quais são os critérios para que minha instituição possa se tornar uma parceira?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-b-0 border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It comes with default styles that match the other components' aesthetic.
+                            Avaliamos parcerias com base na missão, valores e capacidade de contribuição da instituição. Estamos abertos a colaborar com organizações que compartilham nosso compromisso com o impacto social positivo.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
                         <AccordionTrigger className="flex items-center justify-between w-full p-4 text-lg font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-b-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 gap-3">
-                            Is it animated?
+                            Como minha instituição pode se tornar uma parceira?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Yes. It's animated by default, but you can disable it if you prefer.
+                            Para se tornar uma parceira, preencha o formulário de parceria disponível na seção "Parcerias" do nosso site. Nossa equipe entrará em contato para discutir os detalhes da colaboração.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
