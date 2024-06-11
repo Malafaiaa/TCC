@@ -13,6 +13,7 @@ import {
 import { Check, Linkedin } from "lucide-react";
 import { LightBulbIcon } from "./Icons1";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export const HeroCards = () => {
   return (
@@ -90,7 +91,7 @@ export const HeroCards = () => {
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full text-white">Doe apertando aqui</Button>
+           <Link href="/pages/instituicoes-participantes"> <Button className=" w-full  text-white ">Doer apertando aqui</Button></Link>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />

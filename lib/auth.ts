@@ -4,9 +4,10 @@ import CredentialProvider from "next-auth/providers/credentials"
 import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google"
 
-import { db as prisma} from "@/lib/prisma"
+import { db, db as prisma} from "@/lib/prisma"
 
 import bcrypt from "bcrypt"
+import Email from "next-auth/providers/email"
 
 export const authOptions: NextAuthOptions = {
     // @see https://github.com/prisma/prisma/issues/16117
@@ -80,5 +81,38 @@ export const authOptions: NextAuthOptions = {
           debug: process.env.NODE_ENV === "development",
           pages: {
             signIn: "/pages/login",
+          },
+          callbacks: {
+            async session({ token, session }) {
+              if (token) {
+               session.user.id = token.id
+               session.user.name = token.name
+               session.user.email = token.email
+               session.user.role = token.role
+               session.user.image = token.picture
+              }
+              return session;
+            },
+            async jwt({ token, user }) {
+              const dbUser = await db.user.findFirst({
+                where: {
+                  email: token.email,
+                },
+
+              })
+
+              if (!dbUser) {
+                token.id = user!.id
+                return token
+              }
+              return{
+                id: dbUser.id,
+                name: dbUser.name,
+                role: dbUser.role,
+                email: dbUser.email,
+                picture: dbUser.image,
+              }
+             
+            },
           },
         };
