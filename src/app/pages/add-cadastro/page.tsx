@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import Image from 'next/image';
 import Link from "next/link";
@@ -6,7 +5,8 @@ import { UserRegisterForm } from "@/components/user-register-auth";
 import AuthButton from "@/components/auth-button";
 import AuthButtonCompany from "@/components/auth-company-buttom";
 import { AddOngForm } from "@/components/form-add-ong";
-
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Autenticação",
@@ -15,6 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default async function CadastroOng(props) {
+  const session = await getServerSession(authOptions);
+
+  if (!session || session.user.role !== 'ORG') {
+    throw new Error('Você precisa ser uma organização para acessar essa página');
+  }
+
   return (
     <div className="">
       {/* <AuthButtonCompany page="register" /> */}
@@ -33,17 +39,12 @@ export default async function CadastroOng(props) {
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">Cadastre sua instituição</h1>
             <p className="text-sm text-muted-foreground">
-              Preencha com os dados Necessários
+              Preencha com os dados necessários
             </p>
-            
           </div>
-
-          <AddOngForm></AddOngForm>
-        
-      
-        
+          <AddOngForm />
           <p className="px-8 text-center text-sm text-gray-600">
-            Ao clicar em registar, você concorda com nossos{" "}
+            Ao clicar em registrar, você concorda com nossos{" "}
             <Link
               href="/terms"
               className="underline underline-offset-4 hover:text-primary"

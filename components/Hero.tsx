@@ -30,7 +30,7 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-         <Link href="/pages/instituicoes-participantes"> <Button className=" w-full md:w-1/3 text-white ">Doar</Button></Link>
+         <Link href="/pages/instituicoes-participantes"> <Button className=" w-full md:w-1/3 text-white ">Instituições participantes</Button></Link>
         
 
         

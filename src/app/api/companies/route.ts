@@ -43,6 +43,7 @@ export async function POST(request: NextRequest) {
             name,
             cnpj,
             hashedPassword,
+            role: 'ORG', 
         },
     });
 

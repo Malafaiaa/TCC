@@ -10,7 +10,7 @@ interface OngsPageProps {
   };
 }
 
-const OngsPage = async ({ searchParams }) => {
+const OngsPage = async ({ searchParams }:OngsPageProps) => {
   if (!searchParams.search) {
     return redirect("/pages/instituicoes-participantes");
   }
@@ -29,11 +29,11 @@ const OngsPage = async ({ searchParams }) => {
       <HeaderTeste />
 
       <div className="px-5 py-6 flex flex-col gap-6">
-        <Search
+        {/* <Search
           defaultValues={{
             search: searchParams.search,
           }}
-        />
+        /> */}
 
         <h1 className="text-gray-400 font-bold text-xs uppercase">Resultados para &quot;{searchParams.search}&quot;</h1>
 

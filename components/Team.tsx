@@ -34,7 +34,7 @@ const teamList: TeamProps[] = [
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/malafacoin/",
+        url: "https://www.instagram.com/malafa_/",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                
               </CardContent>
 
               <CardFooter>

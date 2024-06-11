@@ -47,43 +47,12 @@ const ServiceItem = ({ donation, ong, isAuthenticated }) => {
 
   const handleBookingClick = () => {
     if (!isAuthenticated) {
-      return signIn("google");
+      return signIn("");
     }
-    setSheetIsOpen(true);
+    router.push("/pages/donation");
   };
 
-  const handleBookingSubmit = async () => {
-    setSubmitIsLoading(true);
-
-    try {
-      if (!date || !data?.user) {
-        return;
-      }
-
-      await saveBooking({
-        donationId: donation.id,
-        ongId: ong.id,
-        date: date,
-        userId: (data.user as any).id,
-      });
-
-      setSheetIsOpen(false);
-      setDate(undefined);
-      toast("Sua doação foi feita!", {
-        description: format(date, "'Para' dd 'de' MMMM", {
-          locale: ptBR,
-        }),
-        action: {
-          label: "Visualizar",
-          onClick: () => router.push("/bookings"),
-        },
-      });
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setSubmitIsLoading(false);
-    }
-  };
+  
 
   return (
     <Card>
@@ -112,51 +81,7 @@ const ServiceItem = ({ donation, ong, isAuthenticated }) => {
                   </Button>
                 </SheetTrigger>
 
-                <SheetContent className="p-0">
-                  <SheetHeader className="text-left px-5 py-6 border-b border-solid border-secondary">
-                    <SheetTitle>Escolha a data da doação</SheetTitle>
-                  </SheetHeader>
-
-                  <div className="py-6">
-                    <Calendar
-                      mode="single"
-                      selected={date}
-                      onSelect={handleDateClick}
-                      locale={ptBR}
-                      fromDate={addDays(new Date(), 1)}
-                      styles={{
-                        head_cell: {
-                          width: "100%",
-                          textTransform: "capitalize",
-                        },
-                        cell: {
-                          width: "100%",
-                        },
-                        button: {
-                          width: "100%",
-                        },
-                        nav_button_previous: {
-                          width: "32px",
-                          height: "32px",
-                        },
-                        nav_button_next: {
-                          width: "32px",
-                          height: "32px",
-                        },
-                        caption: {
-                          textTransform: "capitalize",
-                        },
-                      }}
-                    />
-                  </div>
-
-                  <SheetFooter className="px-5">
-                    <Button onClick={handleBookingSubmit} disabled={!date || submitIsLoading}>
-                      {submitIsLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                      Confirmar doação
-                    </Button>
-                  </SheetFooter>
-                </SheetContent>
+               
               </Sheet>
             </div>
           </div>

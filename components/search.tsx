@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 
@@ -31,7 +32,7 @@ const Search = ({ defaultValues }: SearchProps) => {
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    router.push(`/ongs?search=${data.search}`);
+    router.push(`/pages/ongs?search=${data.search}`);
   };
 
   return (
