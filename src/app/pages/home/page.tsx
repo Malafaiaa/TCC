@@ -8,6 +8,8 @@ import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
 import SectionServices from "./components/Section-services";
 import SectionDuvidas from "./components/section-duvidas";
+import SectionFaleConosco from "./components/Section-faleconosco";
+import Footer from "./components/Footer";
 
 
 
@@ -25,6 +27,8 @@ function    App(props: any) {
             <SectionDuvidas />
             <Testimonials />
             <Team />
+            <SectionFaleConosco/>
+            <Footer/>
         </>
     );
 }

@@ -42,6 +42,9 @@ const routeList: RouteProps[] = [
   {
     href: "testemunhas",
     label: "Comentários",
+  },{
+    href: "faleconosco",
+    label: "Fale Conosco",
   },
   
 ];

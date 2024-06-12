@@ -11,6 +11,9 @@ import { TestimonialsJuridico } from "@/components/TestimonialsJuridico";
 import { HowItWorksJuridico } from "@/components/HowItWorksJuridico";
 import { ServicesJuridico } from "@/components/ServicesJuridico";
 import { NavbarJuridico } from "@/components/NavbarJuridico";
+import Footer from "../home/components/Footer";
+import SectionEventos from "./components/Section-eventos";
+import SectionParcerias from "./components/Section-parcerias";
 
 
 
@@ -26,7 +29,11 @@ function App(props: any) {
             <HowItWorksJuridico />
             <SectionDuvidas />
             <TestimonialsJuridico />
+            <SectionEventos/>
+            <SectionParcerias/>
             <Team />
+            <Footer/>
+
         </>
     );
 }

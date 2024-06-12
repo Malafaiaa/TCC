@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Autenticação utilizando Shadcs-ui Next-Auth (Authjs), prisma e Nextjs 13.4+",
 };
 
-export default async function Register(props) {
+export default async function Register() {
   return (
     <div className="container relative py-8 md:py-0 min-h-screen flex flex-col md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
       <AuthButtonCompany page="register" />
