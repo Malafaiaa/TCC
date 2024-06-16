@@ -6,7 +6,7 @@ import { getServerSession } from "next-auth/next";
 import HeaderEmpresa from "../home/components/Header-empresa";
 import HeaderTeste from "../home/components/Header-teste";
 
-export default async function InstituPart(props) {
+export default async function InstituPart() {
   const session = await getServerSession(authOptions);
 
   // Fetch the ong data from the database

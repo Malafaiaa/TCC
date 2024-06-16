@@ -6,17 +6,18 @@ export default function SectionFaleConosco() {
     return (
         <section id="faleconosco" className="flex flex-col items-center justify-center w-full" >
 
-<label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+<label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Com dúvidas? nos contate!</label>
             <form className="flex items-center justify-center m-5 w-1/2"  >
                 <div className="w-full mb-4 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:">
                     <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
                         <label htmlFor="comment" className="sr-only">Your comment</label>
-                        <textarea id="comment"  className="focus:outline-none w-full px-0 text-sm  bg-white" placeholder="Write a comment..." required ></textarea>
+                        <textarea id="comment"  className="focus:outline-none w-full px-0 text-sm  bg-white" placeholder="Tem alguma dúvida? envie por aqui..." required ></textarea>
                     </div>
                     <div className="flex items-center justify-between px-3 py-2 border-t ">
                         <button type="submit" className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                            Post comment
+                            ENVIAR
                         </button>
+                        
                         {/* <div className="flex ps-0 space-x-1 rtl:space-x-reverse sm:ps-2">
                             <button type="button" className="inline-flex justify-center items-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 20">
@@ -40,7 +41,7 @@ export default function SectionFaleConosco() {
                     </div>
                 </div>
             </form>
-            <p className="text-xs text-gray-500 dark:text-gray-400">Remember, contributions to this topic should follow our <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">Community Guidelines</a>.</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Para informações mais detalhadas, nos contate no email <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">doacon.org@outlook.com.br</a>.</p>
 
 
         </section>

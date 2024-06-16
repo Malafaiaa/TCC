@@ -10,21 +10,21 @@ export const HeroJuridico = () => {
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#0066cc]  to-[#004c97] text-transparent bg-clip-text">
-              DoaçON
+              DoaçON:
             </span>{" "}
-             a plataforma
+             cadastre
           </h1>{" "}
-          que gera{" "}
+          a sua{" "}
           <h2 className="inline">
             <span className="inline bg-gradient-to-r from-[#0066cc]  to-[#004c97] text-transparent bg-clip-text">
-              Amor
+              Instituição!
             </span>{" "}
            
           </h2>
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-        Junte-se a nós e faça a sua contribuição hoje! Com apenas alguns cliques, você pode fazer a diferença na vida de muitas pessoas. Vamos unir nossos esforços para construir um mundo melhor para todos. Sua ajuda é valiosa e pode mudar vidas. Faça a sua parte agora e faça a diferença!
+        Cadastre sua ONG na <strong className="font-semibold text-gray-900 dark:text-white">DoaçON</strong> e descubra como mobilizar recursos de forma simples e eficiente. Nossa plataforma facilita o processo de captação de recursos, permitindo que você dedique mais tempo ao seu trabalho vital de transformar vidas. Juntos, podemos criar um mundo melhor, onde cada contribuição faz a diferença.<strong className="font-semibold text-gray-900 dark:text-white"> Junte-se a nós e potencialize sua missão de impacto social!</strong>
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">

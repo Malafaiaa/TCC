@@ -14,7 +14,7 @@ import { Navbar } from "@/components/Navbar";
 import { Navbar3 } from "@/components/Navbar3";
 import Search from "@/components/search";
 
-const HeaderTeste = (props) => {
+const HeaderTeste = () => {
   return (
     
     <Card>
