@@ -3,10 +3,10 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion"
-import style from '../section.module.css'
+} from "@/components/ui/accordion";
+import style from '../section.module.css';
 
-export default function SectionDuvidas(props: any) {
+export default function SectionDuvidas(props) {
     return (
         <section className={style.section_duvidas} id={style.section_duvidas}>
             <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
@@ -34,7 +34,7 @@ export default function SectionDuvidas(props: any) {
                             Como minha instituição pode se tornar uma parceira?
                         </AccordionTrigger>
                         <AccordionContent className="p-4 border border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-                            Para se tornar uma parceira, preencha o formulário de parceria disponível na seção "Parcerias" do nosso site. Nossa equipe entrará em contato para discutir os detalhes da colaboração.
+                            Para se tornar uma parceira, preencha o formulário de parceria disponível na seção &quot;Parcerias&quot; do nosso site. Nossa equipe entrará em contato para discutir os detalhes da colaboração.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

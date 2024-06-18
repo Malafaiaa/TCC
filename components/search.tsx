@@ -37,7 +37,7 @@ const Search = ({ defaultValues }: SearchProps) => {
 
   return (
     <div className="flex items-center gap-4 max-w-xl mx-auto">
-      <Form {...form} className="w-full flex-grow">
+      <Form  {...form} >
         <form className="flex w-full gap-2" onSubmit={form.handleSubmit(handleSubmit)}>
           <FormField
             control={form.control}
