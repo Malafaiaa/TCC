@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Autenticação utilizando Shadcs-ui Next-Auth (Authjs), prisma e Nextjs 13.4+",
 };
 
-export default async function CadastroOng(props) {
+export default async function CadastroOng() {
   const session = await getServerSession(authOptions);
 
   if (!session || session.user.role !== 'ORG') {

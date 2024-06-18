@@ -17,7 +17,7 @@ import SectionParcerias from "./components/Section-parcerias";
 
 
 
-function App(props: any) {
+function App() {
     return (
         <>
             <NavbarJuridico></NavbarJuridico>

@@ -13,7 +13,7 @@ interface OngInfoProps {
   ong: Ong;
 }
 
-const OngInfo = ({ ong }) => {
+const OngInfo = ({ ong }: OngInfoProps) => {
   const router = useRouter();
 
   const handleBackClick = () => {
