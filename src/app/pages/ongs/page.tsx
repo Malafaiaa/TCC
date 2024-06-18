@@ -2,7 +2,7 @@ import { db } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import HeaderTeste from "../home/components/Header-teste";
 import Search from "@/components/search";
-import OngItem from "@/components/ong-item";
+import OngItem from "@/components/ong-item-payment";
 
 interface OngsPageProps {
   searchParams: {
