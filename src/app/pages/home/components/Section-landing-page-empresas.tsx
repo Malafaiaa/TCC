@@ -1,7 +1,8 @@
+import Image from 'next/image'; // Importing the Image component from next/image
 import style from '../section.module.css';
 import Link from 'next/link';
 
-export default function SectionLandingPageEmpresas(props: any) {
+export default function SectionLandingPageEmpresas(props) {
     return (
         <section className={style.section_presentation}>
             <div className={style.box_presentation}>
@@ -14,7 +15,13 @@ export default function SectionLandingPageEmpresas(props: any) {
                     </Link>
                 </div>
                 <div>
-                    <img className={style.img_landingpage} src="/images/undraw.png" alt="Ilustração de pessoas ajudando" />
+                    <Image 
+                        className={style.img_landingpage} 
+                        src="/images/undraw.png" 
+                        alt="Ilustração de pessoas ajudando" 
+                        width={500}  // Adjust the width as per your requirements
+                        height={400} // Adjust the height as per your requirements
+                    />
                 </div>
             </div>
         </section>

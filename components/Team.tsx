@@ -1,3 +1,4 @@
+"use client";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -8,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import Image from 'next/image'; // Importing the Image component from next/image
 
 interface TeamProps {
   imageUrl: string;
@@ -109,7 +111,6 @@ export const Team = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        
         POWER RANGERS
       </h2>
 
@@ -125,10 +126,12 @@ export const Team = () => {
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
+                <Image
                   src={imageUrl}
                   alt={`${name} ${position}`}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+                  width={96} // Adjust the width as per your requirements
+                  height={96} // Adjust the height as per your requirements
                 />
                 <CardTitle className="text-center">{name}</CardTitle>
                 <CardDescription className="text-primary">
@@ -136,9 +139,7 @@ export const Team = () => {
                 </CardDescription>
               </CardHeader>
 
-              <CardContent className="text-center pb-2">
-                
-              </CardContent>
+              <CardContent className="text-center pb-2"></CardContent>
 
               <CardFooter>
                 {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (

@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons1";
-
+import Image from 'next/image'; // Importing the Image component from next/image
 
 interface ServiceProps {
   title: string;
@@ -35,14 +35,10 @@ export const Services = () => {
     <section className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
+          <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-2xl dark:text-white">Centrado no Usuário</h1>
+          <h2 className="text-3xl md:text-4xl font-bold"></h2>
 
-        <h1 className="mb-1 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 md:text-5xl lg:text-2xl dark:text-white">Centrado no Usuário</h1>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            
-            
-          </h2>
-
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
+          <p className="text-muted-foreground text-xl mt-4 mb-8">
             Nossa plataforma promove a cultura da doação, conectando doadores e beneficiários de maneira eficaz e transparente.
           </p>
 
@@ -65,13 +61,14 @@ export const Services = () => {
           </div>
         </div>
 
-        <img
-          src={ "/images/centradoU.svg"}
+        <Image
+          src="/images/centradoU.svg"
+          width={600} // Adjust the width as per your requirements
+          height={600} // Adjust the height as per your requirements
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           alt="About services"
         />
       </div>
-      
     </section>
   );
 };
