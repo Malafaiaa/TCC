@@ -1,7 +1,7 @@
 import Image from 'next/image'; // Importing the Image component from next/image
 import style from '../section.module.css';
 
-export default function SectionWhyChooseUs(props) {
+export default function SectionWhyChooseUs() {
     return (
         <section className={style.section_why_choose} id={style.why_choose}>
             <h1>POR QUE ESCOLHER NOSSA PLATAFORMA?</h1>

@@ -1,3 +1,4 @@
+"use client"
 import { About } from "@/components/About";
 import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -10,6 +11,7 @@ import SectionServices from "./components/Section-services";
 import SectionDuvidas from "./components/section-duvidas";
 import SectionFaleConosco from "./components/Section-faleconosco";
 import Footer from "./components/Footer";
+import React from "react";
 
 
 

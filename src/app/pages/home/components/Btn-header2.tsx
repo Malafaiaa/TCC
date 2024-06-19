@@ -9,7 +9,7 @@ import SideMenu from './side-menu'
 import SideMenu2 from './side-menu2'
 
 
-function BtnHeader(props) {
+function BtnHeader() {
     return (
         <>
              <Sheet>

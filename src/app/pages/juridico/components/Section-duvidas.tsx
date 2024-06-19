@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import style from '../section.module.css';
 
-export default function SectionDuvidas(props) {
+export default function SectionDuvidas() {
     return (
         <section className={style.section_duvidas} id={style.section_duvidas}>
             <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">

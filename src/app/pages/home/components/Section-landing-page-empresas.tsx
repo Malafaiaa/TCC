@@ -2,7 +2,7 @@ import Image from 'next/image'; // Importing the Image component from next/image
 import style from '../section.module.css';
 import Link from 'next/link';
 
-export default function SectionLandingPageEmpresas(props) {
+export default function SectionLandingPageEmpresas() {
     return (
         <section className={style.section_presentation}>
             <div className={style.box_presentation}>

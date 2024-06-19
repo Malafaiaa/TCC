@@ -4,7 +4,7 @@ import { LogInIcon, LogOutIcon, UserIcon, UserPlus } from "lucide-react";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 
-const SideMenu = (props) => {
+const SideMenu = () => {
   const { data: session } = useSession();
   const isAuthenticated = session?.user;
   const userName = session?.user?.name;

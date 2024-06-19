@@ -6,7 +6,7 @@ import "../styles.css";
 import MenuEmpresa from "./Menu.empresa";
 import Image from "next/image"; // Importing the Image component from next/image
 
-function HeaderEmpresa(props) {
+function HeaderEmpresa() {
   return (
     <>
       <div className="header">
