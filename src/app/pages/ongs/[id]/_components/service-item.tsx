@@ -14,70 +14,78 @@ interface ServiceItemProps {
 }
 
 const ServiceItem = ({ donation, ong, isAuthenticated }: ServiceItemProps) => {
-  const { data } = useSession();
-  const [donationAmount, setDonationAmount] = useState("0,00");
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { data } = useSession(); // Obtém os dados da sessão do usuário
+  const [donationAmount, setDonationAmount] = useState("0,00"); // Estado para o valor da doação formatado
+  const [modalIsOpen, setModalIsOpen] = useState(false); // Estado para controlar a abertura do modal de doação
 
+  // Função para abrir o modal de doação
   const handleOpenModal = () => {
     if (!isAuthenticated) {
-      return signIn("");
+      return signIn(""); // Redireciona para o processo de autenticação se não estiver autenticado
     }
-    setModalIsOpen(true);
+    setModalIsOpen(true); // Abre o modal de doação
   };
 
+  // Função para fechar o modal de doação
   const handleCloseModal = () => {
-    setModalIsOpen(false);
+    setModalIsOpen(false); // Fecha o modal de doação
   };
 
+  // Função para tratar a mudança no valor da doação no campo de input
   const handleDonationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
-    const formattedValue = formatCurrency(input);
-    setDonationAmount(formattedValue);
+    const input = e.target.value.replace(/\D/g, ""); // Remove tudo que não for dígito
+    const formattedValue = formatCurrency(input); // Formata o valor da doação
+    setDonationAmount(formattedValue); // Atualiza o estado com o valor formatado
   };
 
+  // Função para submeter o formulário de doação
   const handleDonationSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão de submissão do formulário
 
-    const valueInCents = parseInt(donationAmount.replace(/[^\d]/g, ''), 10); // Remove non-digit characters and convert to number
+    const valueInCents = parseInt(donationAmount.replace(/[^\d]/g, ""), 10); // Remove caracteres não numéricos e converte para número
 
-    // Ensure the donation amount is at least 1 real (100 cents)
+    // Garante que o valor da doação seja de pelo menos 1 real (100 centavos)
     if (valueInCents < 100) {
       alert("O valor mínimo para doação é R$ 1,00.");
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/create_preference", {
+      const response = await fetch("/api/create_preference", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ongId: ong.id, donationAmount: valueInCents / 100 }),
+        body: JSON.stringify({ ongId: ong.id, donationAmount: valueInCents / 100 }), // Envia o ID da ONG e o valor da doação em reais
       });
 
       if (response.ok) {
-        const { qrCodeURL } = await response.json();
+        const { qrCodeURL } = await response.json(); // Extrai a URL do QR Code do Mercado Pago
         window.location.href = qrCodeURL; // Redireciona para a URL do QR Code do Mercado Pago
       } else {
-        console.error("Erro ao criar preferência de pagamento");
+        const errorText = await response.text();
+        console.error("Erro ao criar preferência de pagamento", errorText);
+        alert("Erro ao criar preferência de pagamento: " + errorText); // Exibe mensagem de erro ao criar a preferência de pagamento
       }
     } catch (error) {
-      console.error("Erro ao processar pagamento:", error);
+      console.error("Erro ao processar pagamento:", (error as Error).message);
+      alert("Erro ao processar pagamento: " + (error as Error).message); // Exibe mensagem de erro ao processar o pagamento
     }
   };
 
+  // Função para formatar o valor da doação como moeda brasileira
   const formatCurrency = (value: string): string => {
-    const numericValue = parseInt(value, 10);
+    const numericValue = parseInt(value, 10); // Converte o valor para número inteiro
 
     if (isNaN(numericValue)) {
-      return "R$ 0,00";
+      return "R$ 0,00"; // Retorna "R$ 0,00" se o valor não for um número
     }
 
-    const stringValue = numericValue.toString().padStart(3, "0");
-    const reais = stringValue.slice(0, -2).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    const centavos = stringValue.slice(-2);
+    const stringValue = numericValue.toString().padStart(3, "0"); // Converte o número para string e preenche com zeros à esquerda
+    const reais = stringValue.slice(0, -2).replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Formata os reais com separador de milhar
+    const centavos = stringValue.slice(-2); // Obtém os centavos
 
-    return `R$ ${reais},${centavos}`;
+    return `R$ ${reais},${centavos}`; // Retorna o valor formatado como moeda REAL
   };
 
   return (
