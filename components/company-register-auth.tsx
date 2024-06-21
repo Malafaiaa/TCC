@@ -163,26 +163,9 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
                 <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
                 </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                    <span className="bg-background px-2 text-muted-foreground">
-                        Ou continue com
-                    </span>
-                </div>
+               
             </div>
-            <Button
-                onClick={() => signIn("google", { callbackUrl: "/pages/login" })}
-                variant="outline"
-                type="button"
-                disabled={isLoading}
-                className="w-full border-gray-300 py-2 rounded-md flex items-center justify-center space-x-2 focus:outline-none focus:ring focus:border-blue-300"
-            >
-                {isLoading ? (
-                    <Icons.spinner className="h-4 w-4 animate-spin" />
-                ) : (
-                    <Icons.google className="h-4 w-4 mr-2" />
-                )}
-                <span>Google</span>
-            </Button>
+           
         </div>
     );
 }

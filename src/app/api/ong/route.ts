@@ -22,9 +22,20 @@ export async function POST(request: NextRequest) {
             },
         });
 
-        return NextResponse.json(newOng);
+        // Criar a doação Pix associada à nova ONG
+        const pixDonation = await prisma.donation.create({
+            data: {
+                name: "Pix",
+                description: "Realize uma doação em forma de pix",
+                imageUrl: "https://utfs.io/f/1ae7bdaf-7aa0-4742-ac75-302f026adb64-2dnj.jpeg",
+                ongId: newOng.id, // Associar a doação à ONG criada
+            },
+        });
+
+        // Retornar a ONG criada com a doação Pix associada
+        return NextResponse.json({ newOng, pixDonation });
     } catch (error) {
-        console.error("Erro ao criar ONG:", error);
-        return NextResponse.json({ error: "Erro ao criar ONG." }, { status: 500 });
+        console.error("Erro ao criar ONG ou doação Pix:", error);
+        return NextResponse.json({ error: "Erro ao criar ONG ou doação Pix." }, { status: 500 });
     }
 }
