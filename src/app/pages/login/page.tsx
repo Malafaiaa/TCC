@@ -16,7 +16,7 @@ export default async function Register() {
       <AuthButton page="login" />
       <div className="relative hidden md:flex md:h-full">
         <Image
-          src="/images/pw.jpg"
+          src="/images/login2.svg"
           alt="Descrição da imagem"
           layout="fill"
         />

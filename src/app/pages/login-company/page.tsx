@@ -18,7 +18,8 @@ export default async function CompanyLogin() {
       <AuthButtonCompany page="entrar" />
       <div className="relative hidden md:flex md:h-full">
         <Image
-          src="/images/pw.jpg"
+          src="/images/login1.svg"
+          className="min-w-550px min-h-550px"          
           alt="Descrição da imagem"
           layout="fill"
         />

@@ -5,11 +5,11 @@ const { v4: uuidv4 } = require('uuid');
 
 // Step 2: Load environment variables from .env file
 require('dotenv').config();
-console.log('MercadoPago Access Token:', process.env.MERCADOPAGO_ACCESS_TOKEN);
+//console.log('MercadoPago Access Token:', process.env.MERCADOPAGO_ACCESS_TOKEN);
 
 // Step 3: Initialize the client object
 const client = new MercadoPagoConfig({
-  accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN,
+  accessToken: "APP_USR-236878317122707-062016-59edd63a68061ec432be0fa7c0804ba2-722424585",
   options: { timeout: 5000 }
 });
 
