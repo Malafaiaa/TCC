@@ -5,77 +5,80 @@ export default function Footer() {
         <>
 
 
-            <footer className=" flex bg-white dark:bg-gray-900 w-full" >
-                <div className=" w-full ">
-                    <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <footer className=" bg-white dark:bg-gray-900 w-full" >
+                <div className=" justify-center flex flex-col  w-full ">
+                    <div className=" grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                        <div className=" flex flex-col">
+                            <h2 className="text-center mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Compania</h2>
+                            <ul className="text-gray-500 mx-auto dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className=" hover:underline">About</a>
+                                    <a href="#about" className=" text-left hover:underline">Sobre nós</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Careers</a>
+                                    <a href="#servicos" className="hover:underline">Serviços</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Brand Center</a>
+                                    <a href="#" className="hover:underline">Página inicial</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Discord Server</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Twitter</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Facebook</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Contact Us</a>
+                                    <a href="#" className="hover:underline">Depoimentos</a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                        <div className="justify-center flex flex-col">
+                            <h2 className="text-center mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nos acompanhe por aqui</h2>
+                            <ul className="text-gray-500  mx-auto dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                    <a href="https://discord.com/" className="hover:underline">Servidor do Discord</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Licensing</a>
+                                    <a href="https://x.com/?lang=pt-br" className="hover:underline">Twitter</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                    <a href="https://br.linkedin.com/" className="hover:underline">Linkedin</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="https://www.instagram.com/" className="hover:underline">Instagram</a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                        <div className="justify-center flex flex-col">
+                            <h2 className="text-center mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul className="text-gray-500  mx-auto dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">iOS</a>
+                                    <a href="#" className="hover:underline">Política de privacidade </a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Android</a>
+                                    <a href="#" className="hover:underline">Licença</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Windows</a>
+                                    <a href="#" className="hover:underline">Termos e Condições</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">MacOS</a>
+                                    <a href="#beneficios" className="hover:underline">Benefícios</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="justify-center flex flex-col">
+                            <h2 className="text-center mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Acordos e Negócios</h2>
+                            <ul className="text-gray-500  mx-auto dark:text-gray-400 font-medium">
+                                <li className="mb-4">
+                                    <a href="/pages/juridico#parcerias" className="hover:underline">Parcerias</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="/pages/juridico#eventos" className="hover:underline">Eventos</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="#" className="hover:underline">Regras e Obrigações</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="/pages/juridico" className="hover:underline">Cadastre sua ONG</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-                        <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+                        <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2024 <a href="https://flowbite.com/">DoaçON™</a>.todos os direitos reservados.
                         </span>
                         <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
                             <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
