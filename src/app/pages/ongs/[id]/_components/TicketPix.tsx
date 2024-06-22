@@ -80,15 +80,7 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
             container
             justifyContent="center"
             alignItems="center"
-            minHeight="100vh"
-            backgroundColor="rgba(0, 0, 0, 0.5)" // Fundo escuro semi-transparente
-            zIndex={9999}
-            position="fixed"
-            top={0}
-            left={0}
-            right={0}
-            bottom={0}
-            padding={2}
+            style={{ minHeight: '100vh', backgroundColor: 'rgba(0, 0, 0, 0.5)', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, padding: '2rem' }}
         >
             <Grid item xs={12} md={5}>
                 <Box
