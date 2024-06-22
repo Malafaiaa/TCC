@@ -17,45 +17,45 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: "/images/perfil1.jpg",
-    name: "Sofia Monteiro",
-    userName: "@SoffiMonteiro01",
-    comment: "A plataforma facilitou muito as minhas doações. É intuitiva e eficiente!",
+    image: "/images/ong1.jpg",
+    name: "Associação Solidariedade Global",
+    userName: "Instituição Verificada",
+    comment: "A plataforma revolucionou nosso recebimento de doações. Agora, conseguimos captar recursos de forma organizada e transparente. A interface é intuitiva e eficaz!",
   },
   {
-    image: "/images/perfil2.jpg",
-    name: "Júlia Alves",
-    userName: "@juju.alvessz",
+    image: "/images/ong2.jpg",
+    name: "Instituto Luz da Esperança",
+    userName: "Instituição Verificada",
     comment:
-      "Conectar com beneficiários nunca foi tão fácil. A gestão de doações é incrível.",
+      "Desde que nos cadastramos, o recebimento de doações tornou-se muito eficiente. Conectar com doadores é simples e a gestão das doações é eficaz.",
   },
   {
-    image: "/images/perfil3.jpg",
-    name: "Henrique Oliveira",
-    userName: "@henrique.oli",
+    image: "/images/ong3.jpg",
+    name: "Fundação Coração Aberto",
+    userName: "Instituição Verificada",
     comment:
-      "A automação de tarefas simplificou o processo de doação, tornando tudo mais rápido e seguro.",
+      "A automação das doações nos permite focar mais em nossa missão. Receber doações é rápido e seguro, e estamos alcançando mais doadores do que nunca.",
   },
   {
-    image:"/images/perfil4.jpg",
-    name: "Patrícia Vieira",
-    userName: "@paty.vieira1",
+    image:"/images/ong4.jpg",
+    name: "Projeto Vida em Movimento",
+    userName: "Instituição Verificada",
     comment:
-      "A transparência da plataforma me deu confiança para doar regularmente. Recomendo a todos!",
+      "A plataforma trouxe transparência e confiança no recebimento de doações. A facilidade de uso nos permite gerenciar tudo com regularidade e precisão. Recomendo a todas as ONGs!",
   },
   {
-    image: "/images/perfil5.jpg",
-    name: "Sabrina Martins",
-    userName: "@sasa.martins005",
+    image: "/images/ong5.jpg",
+    name: "Associação Mãos que Transformam",
+    userName: "Instituição Verificada",
     comment:
-      "Ótima experiência! A plataforma realmente promove a cultura da doação de forma inovadora.",
+      "Nossa experiência com a plataforma tem sido excelente! Receber doações nunca foi tão simples e eficiente. A inovação do sistema realmente ajuda a promover a cultura da doação.",
   },
   {
-    image: "/images/perfil6.jpg",
-    name: "Renan Reis",
-    userName: "@renanZ.0001",
+    image: "/images/ong6.jpg",
+    name: "ONG Esperança Renovada",
+    userName: "Instituição Verificada",
     comment:
-      "Participar dessa comunidade de doadores tem sido extremamente gratificante. Adoro a interface!",
+      "Participar desta comunidade de doadores tem sido extremamente gratificante. A interface amigável e os benefícios oferecidos tornaram o recebimento de doações muito mais organizado.",
   },
 ];
 
