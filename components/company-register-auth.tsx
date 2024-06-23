@@ -155,7 +155,7 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
                         {isLoading && (
                             <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
                         )}
-                        Registrar
+                        Criar conta Institucional
                     </Button>
                 </div>
             </form>
