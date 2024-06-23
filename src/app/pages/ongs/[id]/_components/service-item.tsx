@@ -48,8 +48,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation }) => {
           onClose={handleCloseModal} // Passa a função para fechar o modal como prop para o TicketPix
           ongName={ong.name} // Passa o nome da ONG para o TicketPix
           email={ong.email} // Passa o email da ONG para o TicketPix
-          cpf={ong.cnpj} // Passa o CPF da ONG para o TicketPix
-        />
+          cpf={''}        />
       )}
     </>
   );

@@ -77,9 +77,14 @@ model Ong {
   email     String
   donations donation[]
 
+// essa relação aqui nao deveria existir
+// se precisar chegar na transactions da pra fazer uma join com a tabela de donations
   Booking Booking[]
 }
-
+// essa tabela de donation ta faltando coisas
+// aqui deveria ter o id de quem esta doando
+// id da ong já tem, ta certinho
+// ta faltando o id ta transaction
 model donation {
   id          String    @id @default(uuid())
   name        String
@@ -89,6 +94,10 @@ model donation {
   imageUrl    String
   Booking     Booking[]
 }
+
+// essa tabela booking deveria ser uma tabela para 
+// salvar a transação(pedido de pagamento criado pelo mercado pago)
+// aqui deve ter qual os status da transação e algumas outras coisas como o qr code do pix
 
 model Booking {
   id         String   @id @default(uuid())
