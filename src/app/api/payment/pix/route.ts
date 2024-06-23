@@ -1,62 +1,9 @@
-// import { NextRequest, NextResponse } from "next/server";
-// import { v4 as uuidv4 } from "uuid";
-// import { MercadoPagoConfig, Payment } from "mercadopago";
-
-// const client = new MercadoPagoConfig({
-//   //accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN,
-//   accessToken:
-//     "APP_USR-236878317122707-062016-59edd63a68061ec432be0fa7c0804ba2-722424585",
-//   options: { timeout: 5000 },
-// });
-
-// export async function POST(request: NextRequest) {
-//   // id da ong pra sabe pra qual ong ta doando
-//   // isso precisa receber o cpf do doador
-//   // depois de gerar o qr code tem que salvar no banco
-
-//   try {
-//     const req = await request.json();
-//     const body = req.body
-//     const payment = new Payment(client);
-//     const idempotencyKey = uuidv4();
-//     const requestOptions = { idempotencyKey };
-
-//     console.log("REQUEST");
-
-//     const pixTransaction = {
-//       transaction_amount: body.transaction_amount,
-//       description: body.description,
-//       payment_method_id: "pix",
-//       payer: {
-//         email: body.payer.email,
-//         identification: {
-//           type: body.payer.type,
-//           number: body.payer.number,
-//         },
-//       },
-//     };
-
-//     const result = await payment.create({
-//      body: pixTransaction,
-//      requestOptions,
-//     });
-//     // aqui tem quer salvar a transacao no banco de dados se der certo gerar o QR code de pagamento
-//     return NextResponse.json({qrcode: result.point_of_interaction?.transaction_data?.qr_code_base64});
-//   } catch (error) {
-//     console.error("Erro ao criar Pix:", error);
-    
-//     return NextResponse.json({ error: error, status: 500 });
-//   }
-
-
-// }
-
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextRespse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { MercadoPagoConfig, Payment } from "mercadopago";
 
 const client = new MercadoPagoConfig({
-  accessToken: "APP_USR-236878317122707-062016-59edd63a68061ec432be0fa7c0804ba2-722424585",
+  accessToken: "",
   options: { timeout: 5000 },
 });
 
