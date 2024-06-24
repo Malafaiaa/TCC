@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={cn(inter.className, "")}>
         <Toaster />
         <AuthProvider>{children}</AuthProvider>

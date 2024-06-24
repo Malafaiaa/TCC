@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import TicketPix from './TicketPix'; // Importe o componente TicketPix aqui
 
-  interface ServiceItemProps {
+interface ServiceItemProps {
   ong: {
     name: string;
     email: string;
-   
+
   };
   donation: {
     description: string;
@@ -31,17 +31,21 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation, isAuthenticate
 
   return (
     <>
-      <div className="flex gap-4 items-center w-full">
-        <div className="relative min-h-[110px] min-w-[110px] max-h-[110px] max-w-[110px]">
-          <img src={donation.imageUrl} className="rounded-lg" alt="Imagem doação" />
-        </div>
-        <div className="flex flex-col w-full">
-          <h2 className="font-bold">{ong.name}</h2>
-          <p className="text-sm text-gray-400">{donation.description}</p>
-          <div className="flex items-center justify-between mt-3">
-            <Button onClick={handleOpenModal} variant="outlined" style={{ color: 'black', borderColor: 'black' }}>
-              Doar
-            </Button>
+      <div className='flex items-center justify-left md:justify-right  '> 
+        <div className="p-4 rounded-lg shadow-lg min-w-[50px] max-w-[750px] border border-black/10 md:m-0 justify-center items-center gap-4 flex flex-col  md:flex-row ">
+          <div className="flex justify-center items-center min-h-[90px] min-w-[90px] max-h-[110px] max-w-[110px]">
+            <img src={donation.imageUrl} className="rounded-lg" alt="Imagem doação" />
+          </div>
+          <div className=" flex flex-col">
+            <h2 className="font-bold">{ong.name}</h2>
+            <p className="text-sm text-gray-400">{donation.description}</p>
+            <div className="flex items-center justify-between mt-3">
+              <Button
+                className='font-semibold bg-blue-700 hover:bg-blue-800 w-full text-white'
+                onClick={handleOpenModal}>
+                Doar
+              </Button>
+            </div>
           </div>
         </div>
       </div>

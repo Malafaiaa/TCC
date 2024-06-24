@@ -43,14 +43,14 @@ export default async function Register() {
           <p className="px-8 text-center text-sm text-gray-600">
             Ao clicar em continuar, você concorda com nossos{" "}
             <Link
-              href="/terms"
+              href="/pages/termos-e-servicos"
               className="underline underline-offset-4 hover:text-primary"
             >
               Termos de Serviço
             </Link>{" "}
             e{" "}
             <Link
-              href="/privacy"
+              href="/pages/politica-de-privacidade"
               className="underline underline-offset-4 hover:text-primary"
             >
               Política de Privacidade

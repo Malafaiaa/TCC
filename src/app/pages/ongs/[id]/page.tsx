@@ -36,15 +36,17 @@ const OngDatailsPage = async ({ params }:OngDetailsPageProps) => {
   }
 
   return (
-    <div>
+    <section className=" w-full">
+   <div className="flex flex-col rounded-lg  shadow-none  md:shadow-lg m-0 md:m-24 border-none md:border md:border-solid md:border-gray-300   p-6">
       <OngInfo ong={ong} />
 
-      <div className="px-5 flex flex-col gap-4 py-6">
+      <div className=" px-5 flex flex-col gap-4 py-6">
         {ong.donations.map((donation) => (
           <ServiceItem key={donation.id} ong={ong} donation={donation} isAuthenticated={!!session?.user} />
         ))}
       </div>
     </div>
+    </section>
   );
 };
 
