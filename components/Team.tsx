@@ -27,9 +27,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pinimg.com/564x/22/77/59/22775902a94794446eb686bbf24d7458.jpg",
     name: "Guilherme Malafaia",
-    position: "Desenvolvedor FullStack",
+    position: "Back-End Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "#" },
       {
         name: "Github",
         url: "https://github.com/Malafaiaa",
@@ -43,9 +43,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pinimg.com/564x/66/2a/de/662ade708ed011071343861f3b10eef2.jpg",
     name: "Gabriel Godinho",
-    position: "Desenvolvedor FullStack",
+    position: "Back-End Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "#" },
       {
         name: "Github",
         url: "https://github.com/GabrielGodinhoReis",
@@ -59,9 +59,9 @@ const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pinimg.com/564x/d5/ea/7a/d5ea7a91674c24d02f6311036b2ced38.jpg",
     name: "João Sant",
-    position: "Desenvolvedor FullStack",
+    position:  "Frontend Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "#" },
 
       {
         name: "Github",
@@ -78,10 +78,10 @@ const teamList: TeamProps[] = [
     name: "Mariah Godoy",
     position: "Frontend Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "#" },
       {
         name: "Github",
-        url: "https://www.facebook.com/",
+        url: "#",
       },
       {
         name: "Instagram",
