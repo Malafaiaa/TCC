@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
@@ -16,6 +16,7 @@ interface IUser {
   name: string;
   email: string;
   password: string;
+  confirmPassword: string; // Adiciona o campo de confirmação de senha
 }
 
 export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
@@ -26,6 +27,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
     name: "",
     email: "",
     password: "",
+    confirmPassword: "", // Inicializa o campo de confirmação de senha
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -33,6 +35,34 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     setIsLoading(true);
+
+    // Verifica se as senhas coincidem
+    if (data.password !== data.confirmPassword) {
+      toast({
+        title: "Oooops...",
+        description: "As senhas não coincidem. Tente novamente.",
+        variant: "destructive",
+        action: (
+          <ToastAction altText="Tente Novamente">Tente Novamente</ToastAction>
+        ),
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    // Verifica se a senha tem no mínimo 8 caracteres
+    if (data.password.length < 8) {
+      toast({
+        title: "Oooops...",
+        description: "A senha deve ter no mínimo 8 caracteres.",
+        variant: "destructive",
+        action: (
+          <ToastAction altText="Tente Novamente">Tente Novamente</ToastAction>
+        ),
+      });
+      setIsLoading(false);
+      return;
+    }
 
     const request = await fetch("/api/users", {
       method: "POST",
@@ -64,6 +94,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
       name: "",
       email: "",
       password: "",
+      confirmPassword: "", // Reseta o campo de confirmação de senha
     });
     setIsLoading(false);
   }
@@ -79,8 +110,8 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
       <form onSubmit={onSubmit} className="space-y-4">
         <div className="grid gap-2">
           <div className="grid gap-1">
-            <Label className="sr-only" htmlFor="email">
-              Name
+            <Label className="sr-only" htmlFor="name">
+              Nome
             </Label>
             <Input
               id="name"
@@ -115,7 +146,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
           </div>
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="password">
-              Password
+              Senha
             </Label>
             <Input
               id="password"
@@ -130,7 +161,27 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
             />
           </div>
-          <Button disabled={isLoading} className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <div className="grid gap-1">
+            <Label className="sr-only" htmlFor="confirmPassword">
+              Confirmar Senha
+            </Label>
+            <Input
+              id="confirmPassword"
+              placeholder="Confirmar Senha"
+              type="password"
+              autoCapitalize="none"
+              autoCorrect="off"
+              disabled={isLoading}
+              name="confirmPassword"
+              value={data.confirmPassword}
+              onChange={handleChange}
+              className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
+            />
+          </div>
+          <Button
+            disabled={isLoading}
+            className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}

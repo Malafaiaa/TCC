@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
@@ -17,6 +17,7 @@ interface ICompany {
     email: string;
     cnpj: string;
     password: string;
+    confirmPassword: string; // Adicionado para confirmação de senha
 }
 
 export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProps) {
@@ -28,6 +29,7 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
         email: "",
         cnpj: "",
         password: "",
+        confirmPassword: "", // Inicializa o campo de confirmação de senha
     });
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -35,6 +37,34 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
     async function onSubmit(event: React.SyntheticEvent) {
         event.preventDefault();
         setIsLoading(true);
+
+        // Verifica se as senhas coincidem
+        if (data.password !== data.confirmPassword) {
+            toast({
+                title: "Oops...",
+                description: "As senhas não coincidem. Tente novamente.",
+                variant: "destructive",
+                action: (
+                    <ToastAction altText="Tente Novamente">Tente Novamente</ToastAction>
+                ),
+            });
+            setIsLoading(false);
+            return;
+        }
+
+        // Verifica se a senha tem no mínimo 8 caracteres
+        if (data.password.length < 8) {
+            toast({
+                title: "Oops...",
+                description: "A senha deve ter no mínimo 8 caracteres.",
+                variant: "destructive",
+                action: (
+                    <ToastAction altText="Tente Novamente">Tente Novamente</ToastAction>
+                ),
+            });
+            setIsLoading(false);
+            return;
+        }
 
         const request = await fetch("/api/companies", {
             method: "POST",
@@ -66,7 +96,8 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
             name: "",
             email: "",
             cnpj: "",
-            password:"",
+            password: "",
+            confirmPassword: "", // Reseta o campo de confirmação de senha
         });
         setIsLoading(false);
     }
@@ -133,10 +164,9 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
                             className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
                         />
                     </div>
-
                     <div className="grid gap-1">
                         <Label className="sr-only" htmlFor="password">
-                            Password
+                            Senha
                         </Label>
                         <Input
                             id="password"
@@ -147,6 +177,23 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
                             disabled={isLoading}
                             name="password"
                             value={data.password}
+                            onChange={handleChange}
+                            className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
+                        />
+                    </div>
+                    <div className="grid gap-1">
+                        <Label className="sr-only" htmlFor="confirmPassword">
+                            Confirmar Senha
+                        </Label>
+                        <Input
+                            id="confirmPassword"
+                            placeholder="Confirmar Senha"
+                            type="password"
+                            autoCapitalize="none"
+                            autoCorrect="off"
+                            disabled={isLoading}
+                            name="confirmPassword"
+                            value={data.confirmPassword}
                             onChange={handleChange}
                             className="rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2"
                         />
@@ -163,9 +210,7 @@ export function CompanyRegisterForm({ className, ...props }: CompanyAuthFormProp
                 <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
                 </div>
-               
             </div>
-           
         </div>
     );
 }
