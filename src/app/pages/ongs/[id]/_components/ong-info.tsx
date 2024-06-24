@@ -13,7 +13,7 @@ interface OngInfoProps {
   ong: Ong;
 }
 
-const OngInfo = ({ ong }:OngInfoProps) => {
+const OngInfo = ({ ong }: OngInfoProps) => {
   const router = useRouter();
 
   const handleBackClick = () => {
@@ -23,31 +23,22 @@ const OngInfo = ({ ong }:OngInfoProps) => {
   return (
     <div>
       <div className="h-[250px] w-full relative">
-        <Button onClick={handleBackClick} size="icon" variant="outline" className="z-50 absolute top-4 left-4">
+        <Button onClick={handleBackClick} size="icon" variant="outline" className="z-50 bg-white absolute top-4 left-4">
           <ChevronLeftIcon />
         </Button>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
-              <MenuIcon />
-            </Button>
-          </SheetTrigger>
-
-          <SheetContent className="p-0">
-            <SideMenu />
-          </SheetContent>
-        </Sheet>
-
-        <Image
-          src={ong.imageUrl}
-          fill
-          alt={ong.name}
-          style={{
-            objectFit: "cover",
-          }}
-          className="opacity-75"
-        />
+        <div >
+            <Image
+              src={ong.imageUrl}
+              fill
+              alt={ong.name}
+              style={{
+                objectFit: "cover",
+              }}
+              className="rounded-lg"
+            />
+       
+        </div>
       </div>
 
       <div className="px-5 pt-3 pb-6 border-b border-solid border-secondary">
@@ -55,17 +46,17 @@ const OngInfo = ({ ong }:OngInfoProps) => {
         <div className="flex items-center gap-1 mt-2">
           <MapPinIcon className="text-primary" size={18} />
           <p className="text-sm">{ong.address}</p>
-          
+
         </div>
         <div className="flex items-center gap-1 mt-2">
           <Mail className="text-primary" size={18} />
           <p className="text-sm">{ong.email}</p>
-          
+
         </div>
         <div className="flex items-center gap-1 mt-2">
           <PhoneIcon className="text-primary" size={18} />
           <p className="text-sm">{ong.telefone}</p>
-          
+
         </div>
         {/* <div className="flex items-center gap-1 mt-2">
           <StarIcon className="text-primary" size={18} />

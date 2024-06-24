@@ -1,14 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "package.json", "use": "@vercel/node" }
-    ],
-    "build": {
-      "env": {
-        "PRISMA_TELEMETRY_INFORMATION": "false"
-      },
-      "commands": {
-        "build": "npx prisma generate && npm run build"
-      }
+    "env": {
+      "BASE_PATH": "https://tcc-etec-paulistano-6whgfb0w6.vercel.app"
     }
   }
