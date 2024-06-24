@@ -3,10 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import { MercadoPagoConfig, Payment } from "mercadopago";
 
 const client = new MercadoPagoConfig({
-
   accessToken: "APP_USR-236878317122707-062016-59edd63a68061ec432be0fa7c0804ba2-722424585",
   options: { timeout: 5000 },
-  
 });
 
 export async function POST(request: NextRequest) {
@@ -55,17 +53,45 @@ export async function POST(request: NextRequest) {
     console.log("QR code gerado:", ticket_url);
 
     // Retornar a resposta com o QR code
-    return NextResponse.json({ ticket_url: ticket_url });
+    const response = NextResponse.json({ ticket_url: ticket_url });
+
+    // Adicionar cabeçalhos CORS
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+
+    return response;
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error("Erro ao criar Pix:", error);
-      return NextResponse.json({ error: error.message, status: 500 });
+      const response = NextResponse.json({ error: error.message, status: 500 });
+      response.headers.set('Access-Control-Allow-Origin', '*');
+      response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+      response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+      return response;
     } else if (typeof error === 'string') {
       console.error("Erro inesperado ao criar Pix:", error);
-      return NextResponse.json({ error: error, status: 500 });
+      const response = NextResponse.json({ error: error, status: 500 });
+      response.headers.set('Access-Control-Allow-Origin', '*');
+      response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+      response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+      return response;
     } else {
       console.error("Erro inesperado ao criar Pix:", error);
-      return NextResponse.json({ error: "Erro inesperado", status: 500 });
+      const response = NextResponse.json({ error: "Erro inesperado", status: 500 });
+      response.headers.set('Access-Control-Allow-Origin', '*');
+      response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+      response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+      return response;
     }
   }
+}
+
+// Lidar com o método OPTIONS para CORS
+export async function OPTIONS(request: NextRequest) {
+  const response = NextResponse.json({ message: "CORS preflight check" });
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  return response;
 }
