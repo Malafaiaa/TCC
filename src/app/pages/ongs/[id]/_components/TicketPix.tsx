@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Snackbar, TextField, Grid, Typography, Card, CardActions, CardContent, CardMedia, Box } from '@mui/material';
-import InputMask from 'react-input-mask';
 import { postCriarPix } from '@/src/app/api/service';
 
 interface TicketPixProps {
@@ -10,13 +9,22 @@ interface TicketPixProps {
     cpf: string;
 }
 
+// Função para formatar CPF
+const formatCPF = (value: string): string => {
+    // Remove caracteres não numéricos
+    const cleanedValue = value.replace(/\D/g, '');
+    
+    // Aplica a formatação do CPF
+    return cleanedValue.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4').substring(0, 14);
+};
+
 const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) => {
-    const [ticketUrl, setTicketUrl] = useState(null);
+    const [ticketUrl, setTicketUrl] = useState<string | null>(null);
     const [amountNumeric, setAmountNumeric] = useState<number>(0);
     const [errorOpen, setErrorOpen] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-    const [cpfValue, setCpfValue] = useState<string>(cpf);
+    const [cpfValue, setCpfValue] = useState<string>(formatCPF(cpf)); // Formata CPF inicial
 
     const handlePost = () => {
         if (amountNumeric < 1) {
@@ -30,7 +38,7 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
             payer: {
                 email: email,
                 type: "CPF",
-                number: cpfValue
+                number: cpfValue.replace(/\D/g, "") // Remove não numéricos do CPF
             }
         };
 
@@ -80,8 +88,9 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
     };
 
     const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = e.target.value.replace(/\D/g, "");
-        setCpfValue(inputValue);
+        const inputValue = e.target.value;
+        const formattedValue = formatCPF(inputValue);
+        setCpfValue(formattedValue);
     };
 
     return (
@@ -91,7 +100,6 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
             alignItems="center"
             style={{ minHeight: '100vh', backgroundColor: 'rgba(0, 0, 0, 0.5)', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, padding: '2rem' }}
         >
-
             {!ticketUrl ? (
                 <Grid item xs={12} md={5}>
                     <Box
@@ -119,25 +127,21 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
                                 Descrição: A doação é um ato solidário que preenche a alma e semeia a esperança!
                             </Typography>
 
-                            <InputMask
-                                mask="999.999.999-99"
+                            <TextField
+                                label="CPF"
+                                type="text"
                                 value={cpfValue}
                                 onChange={handleCpfChange}
-                            >
-                                {(inputProps: any) => (
-                                    <TextField
-                                        {...inputProps}
-                                        label="CPF"
-                                        type="text"
-                                        fullWidth
-                                        variant="outlined"
-                                        margin="normal"
-                                        InputProps={{
-                                            style: { textAlign: 'right' }
-                                        }}
-                                    />
-                                )}
-                            </InputMask>
+                                fullWidth
+                                variant="outlined"
+                                margin="normal"
+                                inputProps={{
+                                    style: { textAlign: 'right' },
+                                    inputMode: 'numeric',
+                                    pattern: '[0-9]*'
+                                }}
+                                InputProps={{ inputProps: { maxLength: 14 } }}
+                            />
 
                             <TextField
                                 label="Valor da doação"
@@ -149,10 +153,7 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
                                 margin="normal"
                                 InputProps={{
                                     inputMode: 'numeric',
-                                    inputProps: {
-                                        pattern: '[0-9]*',
-                                        style: { textAlign: 'right' }
-                                    },
+                                    style: { textAlign: 'right' }
                                 }}
                             />
                             <Typography variant="body2" color="text.secondary">
@@ -177,19 +178,15 @@ const TicketPix: React.FC<TicketPixProps> = ({ onClose, ongName, email, cpf }) =
                         </CardActions>
                     </Card>
                 </Grid>
-            )
-                : (
-                    <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh' }}>
-                        <Grid item>
-                            <Card sx={{ width: 550, height: 550 }}>
-                                <iframe src={ticketUrl} width="100%" height="100%" />
-                            </Card>
-                        </Grid>
+            ) : (
+                <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh' }}>
+                    <Grid item>
+                        <Card sx={{ width: 550, height: 550 }}>
+                            <iframe src={ticketUrl} width="100%" height="100%" />
+                        </Card>
                     </Grid>
-
-                )
-            }
-
+                </Grid>
+            )}
             <Snackbar
                 open={errorOpen}
                 autoHideDuration={6000}

@@ -4,19 +4,21 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import TicketPix from './TicketPix'; // Importe o componente TicketPix aqui
 
-interface ServiceItemProps {
+  interface ServiceItemProps {
   ong: {
     name: string;
     email: string;
-    cpnj: string;
+   
   };
   donation: {
     description: string;
     imageUrl: string;
   };
+  isAuthenticated: boolean;
+
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation }) => {
+const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation, isAuthenticated }) => {
   const [modalOpen, setModalOpen] = useState(false); // Estado para controlar a abertura do modal
 
   const handleOpenModal = () => {
