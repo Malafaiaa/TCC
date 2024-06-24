@@ -1,9 +1,9 @@
-import { NextRequest, NextRespse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { MercadoPagoConfig, Payment } from "mercadopago";
 
 const client = new MercadoPagoConfig({
-  accessToken: "",
+  accessToken: "APP_USR-236878317122707-062016-59edd63a68061ec432be0fa7c0804ba2-722424585",
   options: { timeout: 5000 },
 });
 

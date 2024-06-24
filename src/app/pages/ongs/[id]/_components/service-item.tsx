@@ -37,7 +37,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation }) => {
           <h2 className="font-bold">{ong.name}</h2>
           <p className="text-sm text-gray-400">{donation.description}</p>
           <div className="flex items-center justify-between mt-3">
-            <Button onClick={handleOpenModal}>
+            <Button onClick={handleOpenModal} variant="outlined" style={{ color: 'black', borderColor: 'black' }}>
               Doar
             </Button>
           </div>
@@ -48,7 +48,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation }) => {
           onClose={handleCloseModal} // Passa a função para fechar o modal como prop para o TicketPix
           ongName={ong.name} // Passa o nome da ONG para o TicketPix
           email={ong.email} // Passa o email da ONG para o TicketPix
-          cpf={''}        />
+          cpf={''} />
       )}
     </>
   );
