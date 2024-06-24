@@ -31,7 +31,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ ong, donation, isAuthenticate
 
   return (
     <>
-      <div className='flex items-center justify-left md:justify-right  '> 
+      <div className='flex items-center justify-center md:justify-right  '> 
         <div className="p-4 rounded-lg shadow-lg min-w-[50px] max-w-[750px] border border-black/10 md:m-0 justify-center items-center gap-4 flex flex-col  md:flex-row ">
           <div className="flex justify-center items-center min-h-[90px] min-w-[90px] max-h-[110px] max-w-[110px]">
             <img src={donation.imageUrl} className="rounded-lg" alt="Imagem doação" />
